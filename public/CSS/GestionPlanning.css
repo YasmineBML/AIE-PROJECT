@@ -1,0 +1,98 @@
+.container {
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    background: #35512F;
+}
+#logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 190px;
+}
+.row {
+    display: flex;
+    background: #35512F;
+    flex-wrap: wrap;
+    margin-left: -15px; /* Pour compenser la marge négative des colonnes */
+    margin-right: -15px; /* Pour compenser la marge négative des colonnes */
+}
+
+.col-md-6 {
+    flex: 0 0 50%; /* Occupe 50% de la largeur */
+    max-width: 50%;
+    padding-left: 15px; /* Marge interne à gauche */
+    padding-right: 15px; /* Marge interne à droite */
+    box-sizing: border-box; /* Inclure les marges dans la largeur */
+}
+
+.col-sm-12 {
+    flex: 0 0 50%; /* Occupe 50% de la largeur */
+    max-width: 50%;
+    padding-left: 15px; /* Marge interne à gauche */
+    padding-right: 15px; /* Marge interne à droite */
+    box-sizing: border-box; /* Inclure les marges dans la largeur */
+}
+
+/* Style spécifique pour le formulaire de sélection */
+#container select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style spécifique pour le bouton Générer */
+#nextPageButton {
+    display: block; /* Fait en sorte que le bouton soit un bloc */
+    margin-left: auto; /* Le pousse à droite */
+}
+#nextPageButton {
+    font-weight: 600; /* Met le texte en gras */
+    font-size: 1.2em; /* Augmente la taille du texte */
+    display: block; /* Fait en sorte que le bouton soit un bloc */
+    color:  #35512F; /* Couleur du texte */
+    background: white;
+    border: none; /* Supprime la bordure */
+    border-radius: 20px; /* Arrondit les coins */
+    padding: 15px 30px; /* Ajuste la taille du bouton */
+    cursor: pointer; /* Curseur de type main pour indiquer un élément cliquable */
+}
+#texte1,h3{
+    color: white;
+}
+.container select{
+    max-width: 200px; /* Largeur maximale réduite */
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+}
+.col-12 {
+    flex: 0 0 100%; /* Occupe 100% de la largeur */
+    max-width: 100%;
+    padding-left: 15px; /* Marge interne à gauche */
+    padding-right: 15px; /* Marge interne à droite */
+    box-sizing: border-box; /* Inclure les marges dans la largeur */
+    margin-bottom: 20px;
+}
+.scrollable-list {
+    height: 160px; /* Définir une hauteur maximale pour la liste */
+    overflow-y: auto; /* Activer le défilement vertical lorsque le contenu dépasse la hauteur maximale */
+    max-width: 200px; /* Définir une largeur maximale pour la liste */
+    border-radius: 15px;
+    border: none;
+}
+
+h2#texte1 {
+    margin-bottom: 50px;
+    color: black;
+}
+/* Media query pour les smartphones */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%; /* Ajuste la largeur pour s'adapter aux petits écrans */
+    }
+}
