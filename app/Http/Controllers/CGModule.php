@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course; // Assurez-vous d'importer le modèle Course si nécessaire
+use App\Models; // Assurez-vous d'importer le modèle Course si nécessaire
 
 class CGModule extends Controller
 {
