@@ -6,110 +6,7 @@
     <title>Modules</title>
     <!-- Inclure jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-
-        .container {
-            width: 50%;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 0 auto;
-            position: relative;
-            background: #35512F;
-            color: white;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        th, tr, td {
-            text-align: center;
-        }
-
-        #searchInput, #btnajoutm {
-            border-radius: 10px;
-            height: 40px;
-        }
-
-        #btnajoutm {
-            cursor: pointer;
-        }
-
-        .row > div {
-            display: inline-block;
-            float: none;
-        }
-        #ajouter,#annuler{
-            font-weight: 500;
-            font-size: 1em;
-            display: block;
-            margin: 10px auto;
-            border: none;
-            border-radius: 20px;
-            padding: 15px 30px;
-            cursor: pointer;
-            color:  white; /* Couleur du texte */
-            background: #35512F;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            color: black;
-            width: 450px;
-            height: 450px;
-        }
-
-        .modal-content {
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .close {
-            color: black;
-            font-size: 20px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        label{
-            margin-right: 10px;
-        }
-        label,input,select,option{
-            margin-bottom: 10px;
-        }
-
-        .modal-header .modal-heading {
-            margin-top: 10px;
-            font-size: 20px;
-        }
-
-        .modal-footer .form-group {
-            text-align: center;
-            margin: 20px;
-        }
-        .modal-divider {
-            border: none;
-            height: 2px; /* Augmentez la hauteur pour la rendre plus visible */
-            background-color: #ccc;
-            margin: 10px 0;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/CSS/Module.css">
 
 </head>
 <body>
@@ -284,6 +181,20 @@
 
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label >Spécialité :</label>
+                        <div class="select2-wrapper" style="margin-top: 10px">
+                            <select id="professors-select" name="professor_ids[]" class="form-control select2" style="width: 50%" multiple>
+                                <option value="1">M1 GL</option>
+                                <option value="2">M1 ASR</option>
+                                <option value="3">M1 SIA</option>
+                                <option value="4">M1 IA</option>
+                                <option value="5">M1 ....</option>
+                            </select>
+                            <span id="selected-professors"></span>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
@@ -373,7 +284,31 @@
         });
     });
 
+    // Sélectionnez le bouton "Annuler"
+    const btnAnnuler = document.getElementById('annuler');
 
+    // Ajoutez un gestionnaire d'événements pour détecter le clic sur le bouton "Annuler"
+    btnAnnuler.addEventListener('click', function() {
+        // Sélectionnez le formulaire
+        const form = document.getElementById('resource-form');
+
+        // Réinitialisez les champs du formulaire
+        form.reset();
+
+        // Réinitialisez les sélections
+        const selectElements = document.querySelectorAll('.select2');
+        selectElements.forEach(function(selectElement) {
+            selectElement.value = ''; // Réinitialisez la sélection à la valeur vide
+        });
+
+        // Réinitialisez l'affichage des options sélectionnées
+        const selectedProfessorsSpans = document.querySelectorAll('#selected-professors');
+        selectedProfessorsSpans.forEach(function(selectedProfessorsSpan) {
+            selectedProfessorsSpan.textContent = ''; // Effacez le contenu du span
+        });
+
+        // Cacher le modal
+    });
 </script>
 
 </body>
