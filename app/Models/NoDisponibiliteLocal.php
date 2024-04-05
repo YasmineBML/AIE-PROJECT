@@ -16,6 +16,6 @@ class NoDisponibiliteLocal extends Model
 
     public function nondisponibilite()
     {
-        return $this->belongsTo(NoDisponibilite::class, 'idND');
+        return $this->belongsTo(Nondisponibilite::class, 'idND');
     }
 }

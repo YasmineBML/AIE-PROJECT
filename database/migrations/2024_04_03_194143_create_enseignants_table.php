@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('motdepasse');
             $table->string('type');
             $table->string('grade');
-            $table->unsignedBigInteger('idexamen'); // Clé étrangère idexamen
+            $table->unsignedBigInteger('idexamen')->unsigned(); // Clé étrangère idexamen
             $table->timestamps();
 
             //// Définir idenseignant comme clé primaire

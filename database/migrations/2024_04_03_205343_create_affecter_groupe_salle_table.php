@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('affecter_groupe_salle', function (Blueprint $table) {
             $table->id('idaffecter');
-            $table->foreignId('idlocal')->constrained('locals');
-            $table->foreignId('idgroupe')->constrained('groupes');
-            $table->timestamps();
+            $table->unsignedBigInteger('idlocal')->constrained('locals')->unsigned();
+            $table->unsignedBigInteger('idgroupe')->constrained('groupes')->unsigned();
 
             // Ajout des clés étrangères
             $table->foreign('idlocal')->references('idlocal')->on('locals')->onDelete('cascade');
             $table->foreign('idgroupe')->references('idgroupe')->on('groupes')->onDelete('cascade');
+            $table->timestamps();
+
         });
     }
 

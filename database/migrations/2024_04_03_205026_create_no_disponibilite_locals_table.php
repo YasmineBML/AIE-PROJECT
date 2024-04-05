@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('no_disponibilite_locals', function (Blueprint $table) {
             $table->id('idnds');
-            $table->foreignId('idlocal')->constrained('locals');
-            $table->foreignId('idND')->constrained('nondisponibilites');
-            $table->timestamps();
+            $table->unsignedBigInteger('idlocal')->constrained('locals')->unsigned();
+            $table->unsignedBigInteger('idND')->constrained('nondisponibilites')->unsigned();
+
 
             $table->foreign('idlocal')->references('idlocal')->on('locals')->onDelete('cascade');
             $table->foreign('idND')->references('idND')->on('nondisponibilites')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

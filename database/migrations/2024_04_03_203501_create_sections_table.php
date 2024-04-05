@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sections', function (Blueprint $table) {
             $table->id('idsection');
             $table->string('nomsection');
-            $table->unsignedBigInteger('idspecialite');
+            $table->unsignedBigInteger('idspecialite')->unsigned();;
 
             // Clé étrangère
             $table->foreign('idspecialite')->references('idspecialite')->on('specialites')->onDelete('cascade');

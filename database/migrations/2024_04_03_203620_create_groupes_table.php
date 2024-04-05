@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('groupes', function (Blueprint $table) {
             $table->id('idgroupe');
             $table->integer('nombre_etudiant');
-            $table->unsignedBigInteger('idsection');
+            $table->unsignedBigInteger('idsection')->unsigned();
 
             // Clé étrangère
             $table->foreign('idsection')->references('idsection')->on('sections')->onDelete('cascade');

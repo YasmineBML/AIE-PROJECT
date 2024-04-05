@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('enseignant_disponibilite', function (Blueprint $table) {
             $table->id('id_Dispo_Ens');
-            $table->unsignedBigInteger('enseignant_id');
-            $table->unsignedBigInteger('disponibilite_id');
+            $table->unsignedBigInteger('enseignant_id')->unsigned();
+            $table->unsignedBigInteger('disponibilite_id')->unsigned();
 
             // Clés étrangères
             $table->foreign('enseignant_id')->references('idenseignant')->on('enseignants')->onDelete('cascade');

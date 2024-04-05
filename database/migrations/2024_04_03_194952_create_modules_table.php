@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
 
             // Définir idspecialite comme clé étrangère
-            $table->foreign('idspecialite')->references("id")->on('specialites');
+            $table->foreign('idspecialite')->references("idspecialite")->on('specialites');
         });
     }
 

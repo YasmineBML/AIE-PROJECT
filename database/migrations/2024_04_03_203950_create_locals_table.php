@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('libelle');
             $table->integer('capacite');
             $table->string('type');
-            $table->unsignedBigInteger('idexamen')->nullable();
+            $table->unsignedBigInteger('idexamen')->nullable()->unsigned();
 
             // Clé étrangère
             $table->foreign('idexamen')->references('idexamen')->on('examens')->onDelete('cascade');

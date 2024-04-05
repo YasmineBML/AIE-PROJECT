@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('idexamen'); // Clé primaire idexamen
             $table->string('duree');
             $table->string('session');
-            $table->unsignedBigInteger('idmodule'); // Clé étrangère idmodule
+            $table->unsignedBigInteger('idmodule')->unsigned(); // Clé étrangère idmodule
             $table->timestamps();
 
             // Définir idmodule comme clé étrangère
