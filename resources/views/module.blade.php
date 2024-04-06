@@ -31,14 +31,7 @@
         </thead>
         <tbody>
         <tr>
-            <td>001</td>
-            <td>Course A</td>
-            <td>
-                <ul>
-                    <li>Professor X</li>
-                    <li>Professor Y</li>
-                </ul>
-            </td>
+            
             <td>
                 <button class="btn btn-primary btn-sm resource-update-btn"><i class="fa fa-pencil"></i></button>
                 <button class="btn btn-danger btn-sm resource-delete-btn"><i class="fa fa-trash-o"></i></button>

@@ -7,5 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Examen extends Model
 {
-    protected $fillable = ['duree', 'session', 'idmodule'];
+    use HasFactory;
+    protected $fillable = [
+        'Date_examen',
+        'crenaux',
+             
+    ];
+
+    // relation pour la relier avec module :
+    public function module()
+    {
+        return $this->belongsTo(Module::class);
+    }
+
+    // relation avec ensieignant :
+    public function enseignants()
+    {
+        return $this->belongsToMany(Examen::class);
+    }
 }

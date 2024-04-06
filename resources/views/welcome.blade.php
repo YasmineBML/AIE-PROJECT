@@ -18,5 +18,6 @@
     </head>
     <body >
 <h1>group  aie</h1>
+<a href="/specialites/specilaite">Acceder a la liste des spécialites</a>
     </body>
 </html>

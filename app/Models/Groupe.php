@@ -7,11 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Groupe extends Model
 {
-    protected $fillable = ['nombre_etudiant', 'idsection'];
+    use HasFactory;
+    protected $fillable = [
+        'nom',
+        'nombre_etudiant',       
+    ];
 
-    // Relation avec la section
     public function section()
     {
-        return $this->belongsTo(Section::class, 'idsection');
+        return $this->belongsTo(Section::class);
+    }
+
+    // la fonction pour relier groupe et local :
+    public function locals()
+    {
+        return $this->belongsToMany(Local::class);
     }
 }

@@ -5,10 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Specialite extends Model
+class specialite extends Model
 {
-    protected $fillable = ['nomspecialite', 'niveau'];
+    use HasFactory;
 
-    // Aucune relation définie pour cette table dans cet exemple
+    protected $fillable = [
+        'nom',
+        'departement',
+        'niveau',
+    ];
+
+    // la focntion pour relier les module et specialite :
+    public function modules()
+    {
+        return $this->hasMany(Module::class);
+    }
 
 }
