@@ -87,7 +87,7 @@
                                         class="btn btn-sm btn-warning mx-2">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form id="{{$enseignant->idenseignant}}" action="{{route('enseignants.destroy',$enseignant->idenseignant)}}" method="post">
+                                    <form id="{{$enseignant->email}}" action="{{route('enseignants.destroy',$enseignant->email)}}" method="post">
                                         @csrf
                                         @method("DELETE")
                                        {{-- <button
@@ -127,7 +127,7 @@
             });
         });
     </script>
-    
+
 </body>
 </html>
 

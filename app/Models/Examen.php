@@ -9,7 +9,7 @@ class Examen extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'Date_examen',
+        'date_examen',
         'crenaux',
              
     ];
@@ -23,6 +23,6 @@ class Examen extends Model
     // relation avec ensieignant :
     public function enseignants()
     {
-        return $this->belongsToMany(Examen::class);
+        return $this->belongsToMany(Enseignant::class);
     }
 }

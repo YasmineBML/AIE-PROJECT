@@ -9,30 +9,25 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('enseignants', function (Blueprint $table) {
-            $table->id('idenseignant'); // Clé primaire idenseignant
+            $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email',200);
-            $table->string('motdepasse');
-            $table->enum('type', ['vacataire', 'permanent', 'doctorant']);
-           // $table->string('type');
+            $table->string('date_de_naissence');
+            $table->string('email');
+            $table->string('mot_de_passe');
             $table->string('grade')->nullable();
+            $table->enum('type', ['vacataire', 'permanent', 'doctorant']);
             $table->timestamps();
-
-            //// Définir idenseignant comme clé primaire
-            $table->primary('idenseignant');
-
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('enseignants');
     }

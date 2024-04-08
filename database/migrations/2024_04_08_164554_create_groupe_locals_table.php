@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('disponibilites', function (Blueprint $table) {
+        Schema::create('groupe_locals', function (Blueprint $table) {
             $table->id();
-            $table->string('jour');
-            $table->string('crenaux');
+            $table->foreignId('groupe_id')->constrained();
+            $table->foreignId('local_id')->constrained();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('disponibilites');
+        Schema::dropIfExists('groupe_locals');
     }
 };

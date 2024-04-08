@@ -24,7 +24,6 @@ class Local extends Model
 
     public function nondisponibilites()
     {
-        return $this->belongsToMany(NonDisponibilite::class);
+        return $this->belongsToMany(Nondisponibilite::class);
     }
-    
 }

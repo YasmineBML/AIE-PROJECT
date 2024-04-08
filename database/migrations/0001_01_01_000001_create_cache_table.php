@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,13 +11,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cache', function (Blueprint $table) {
-            $table->string('key')->primary();
+            $table->string('key', 191)->primary(); // Spécifier une longueur plus courte pour la colonne 'key'
             $table->mediumText('value');
             $table->integer('expiration');
         });
 
         Schema::create('cache_locks', function (Blueprint $table) {
-            $table->string('key')->primary();
+            $table->string('key', 191)->primary(); // Spécifier une longueur plus courte pour la colonne 'key'
             $table->string('owner');
             $table->integer('expiration');
         });
@@ -33,3 +32,4 @@ return new class extends Migration
         Schema::dropIfExists('cache_locks');
     }
 };
+

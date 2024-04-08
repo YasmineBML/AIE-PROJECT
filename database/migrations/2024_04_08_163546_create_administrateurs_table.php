@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('disponibilite_enseignants', function (Blueprint $table) {
+        Schema::create('administrateurs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('enseignants_id')->constrained();
-            $table->foreignId('disponibilites_id')->constrained();
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('date_de_naissence');
+            $table->string('email');
+            $table->string('mot_de_passe');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('disponibilite_enseignants');
+        Schema::dropIfExists('administrateurs');
     }
 };

@@ -46,10 +46,12 @@ class EnseignantController extends Controller
         $this->validate ($request, [
             'nom' =>'required',
             'prenom' => 'required',
+            'date_de_naissence'=> 'required',
             'email' => 'required',
-            'motdepasse' =>'required',
-            'type' =>['required' ,'in:vacataire,permanent,doctorant'],
+            'mot_de_passe' =>'required',
             'grade' => 'nullable',
+            'type' =>['required' ,'in:vacataire,permanent,doctorant'],
+
 
 
         ]);
@@ -94,10 +96,11 @@ class EnseignantController extends Controller
         $this->validate($request, [
             'nom' =>'required',
             'prenom' => 'required',
+            'date_de_naissence'=> 'required',
             'email' => 'required',
-            'motdepasse' =>'required',
-            'type' =>['required' ,'in:vacataire,permanent,doctorant'],
+            'mot_de_passe' =>'required',
             'grade' => 'nullable',
+            'type' =>['required' ,'in:vacataire,permanent,doctorant'],
 
         ]);
         $data = $request->except(['_token', '_method']);
@@ -112,7 +115,7 @@ class EnseignantController extends Controller
      */
     public function destroy(string $id)
     {
-        $enseignant= Enseignant::where('idenseignant', $id)->first();
+        $enseignant= Enseignant::where('email', $id)->first();
         $enseignant->delete();
         return redirect()->route("enseignants.index")->with([
             "success" => "Enseignant deleted successfully"

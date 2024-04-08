@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('specialites', function (Blueprint $table) {
-
-            $table->id('idspecialite');
-            $table->string('nomspecialite');
-
+        Schema::create('modules', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('departement');
-
-            $table->string('niveau');
+            $table->string('libelle');
+            $table->string('semestre');
+            $table->foreignId('specialite_id')->constrained();
             $table->timestamps();
         });
     }
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('specialites');
+        Schema::dropIfExists('modules');
     }
 };

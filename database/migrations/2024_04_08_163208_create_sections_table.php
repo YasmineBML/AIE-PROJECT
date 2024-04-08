@@ -12,19 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sections', function (Blueprint $table) {
-
-            $table->id('idsection');
-            $table->string('nomsection');
-            $table->unsignedBigInteger('idspecialite')->unsigned();;
-
-            // Clé étrangère
-            $table->foreign('idspecialite')->references('idspecialite')->on('specialites')->onDelete('cascade');
-
-
             $table->id();
             $table->string('nom');
-            $table->foreignId('specialites_id')->constrained();
-
+            $table->foreignId('specialite_id')->constrained();
             $table->timestamps();
         });
     }

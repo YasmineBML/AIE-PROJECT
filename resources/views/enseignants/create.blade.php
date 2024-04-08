@@ -142,7 +142,7 @@
 
                         <div class="form-group mb-5" id="in3">
                             <input type="text" class="form-control" value="{{old("grade")}}"  placeholder="grade" name="grade" id="sp">
-                           
+
                                <select name="type" class="form-control" id="numbor" required>
                                     <option value="" selected disabled>
                                         Type
@@ -154,7 +154,10 @@
 
                         </div>
                         <div class="form-group mb-3" id="in4">
-                            <input type="text" class="form-control" value="{{old("motdepasse")}}"  placeholder="motdepasse" name="motdepasse" id="jp">
+                            <input type="text" class="form-control" value="{{old("mot_de_passe")}}"  placeholder="mot de passe" name="mot_de_passe" id="jp">
+                           <input type="text" class="form-control" value="{{old("date_de_naissence")}}"  placeholder="date de naissence" name="date_de_naissence" id="me">
+                          </div>
+                          <div class="form-group mb-3" id="in4">
                            <input type="text" class="form-control" value="{{old("email")}}"  placeholder="Email" name="email" id="me">
                           </div>
                         <div class="form-group row mb-0">

@@ -21,12 +21,14 @@ class EnseignantFactory extends Factory
 
             'nom' => $this->faker->name(),
             'prenom' => $this->faker->name(),
+            'date_de_naissence'=> $this->faker->word(),
             'email' => $this->faker->word(),
-            'motdepasse' => $this->faker->word(),
-            'type' => $this->faker->name(),
+            'mot_de_passe' => $this->faker->word(),
             'grade' => $this->faker->name(),
-        
+            'type' => $this->faker->name(),
 
+
+           
         ];
     }
 }

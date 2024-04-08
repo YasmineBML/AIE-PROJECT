@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('non_disponibilite_locals', function (Blueprint $table) {
+        Schema::create('module_enseignants', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('locals_id')->constrained();
-            $table->foreignId('non_disponibilites_id')->constrained();
+            $table->foreignId('module_id')->constrained();
+            $table->foreignId('enseignant_id')->constrained();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('non_disponibilite_locals');
+        Schema::dropIfExists('module_enseignants');
     }
 };
