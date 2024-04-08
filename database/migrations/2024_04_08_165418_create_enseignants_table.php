@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('date_de_naissence');
             $table->string('email');
             $table->string('mot_de_passe');
-            $table->string('grade');
-            $table->string('type');
+            $table->string('grade')->nullable();
+            $table->enum('type', ['vacataire', 'permanent', 'doctorant']);
             $table->timestamps();
         });
     }
