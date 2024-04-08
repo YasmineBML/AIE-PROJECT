@@ -11,8 +11,8 @@ class Administrateur extends Model
     protected $fillable = [
         'nom',
         'prenom',
-        'Date_de_naissence',
-        'Email',
-        'Mot_de_passe',       
+        'date_de_naissence',
+        'email',
+        'mot_de_passe',       
     ];
 }

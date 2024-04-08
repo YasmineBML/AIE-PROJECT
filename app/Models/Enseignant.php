@@ -11,11 +11,11 @@ class Enseignant extends Model
     protected $fillable = [
         'nom',
         'preom',
-        'Date_de_naissence',
-        'Email',
-        'Mot_de_passe',
-        'Grade',
-        'Type',     
+        'date_de_naissence',
+        'email',
+        'mot_de_passe',
+        'grade',
+        'type',     
     ];
 
     // la fontion pour relier enseignant et disponibilite :
@@ -27,7 +27,7 @@ class Enseignant extends Model
     // la relation avec examen:
     public function examens()
     {
-        return $this->belongsToMany(Enseignant::class);
+        return $this->belongsToMany(Examen::class);
     }
 
     // fonction pour relier avec module 

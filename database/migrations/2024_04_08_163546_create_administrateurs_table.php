@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('Date_naissence');
-            $table->string('Email');
-            $table->string('Mot_de_passe');
+            $table->string('date_de_naissence');
+            $table->string('email');
+            $table->string('mot_de_passe');
             $table->timestamps();
         });
     }
