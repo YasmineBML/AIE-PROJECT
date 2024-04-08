@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('libelle');
             $table->string('semestre');
-            $table->foreignId('specialites_id')->constrained();
+            $table->foreignId('specialite_id')->constrained();
             $table->timestamps();
 
             

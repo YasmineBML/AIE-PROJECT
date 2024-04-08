@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('affecters', function (Blueprint $table) {
+        Schema::create('groupe_local', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('groupes_id')->constrained();
+            $table->foreignId('groupe_id')->constrained();
             $table->foreignId('local_id')->constrained();
             $table->timestamps();
         });

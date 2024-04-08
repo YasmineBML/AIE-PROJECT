@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->foreignId('specialites_id')->constrained();
+            $table->foreignId('specialite_id')->constrained();
             $table->timestamps();
         });
     }

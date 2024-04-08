@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('non_disponibilites', function (Blueprint $table) {
+        Schema::create('nondisponibilites', function (Blueprint $table) {
             $table->id();
             $table->string('Date');
             $table->string('crenaux');

@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('non_disponibilite_locals', function (Blueprint $table) {
+        Schema::create('nondisponibilite_local', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('locals_id')->constrained();
-            $table->foreignId('non_disponibilites_id')->constrained();
+            $table->foreignId('local_id')->constrained();
+            $table->foreignId('nondisponibilite_id')->constrained();
             $table->timestamps();
         });
     }
