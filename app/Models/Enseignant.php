@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enseignant extends Model
 {
-    protected $table = 'enseignants';
-    protected $primaryKey = 'idenseignant';
-    protected $fillable = ['nom', 'prenom', 'email', 'motdepasse', 'type', 'grade', 'idexamen'];
+    use HasFactory;
+
+ protected $table = 'enseignants';
+ protected $primaryKey = 'idenseignant';
+ protected $fillable = ['nom', 'prenom', 'email', 'motdepasse', 'type', 'grade'];
+
+ public function modules()
+    {
+        return $this->belongsToMany(Module::class);
+    }
 }

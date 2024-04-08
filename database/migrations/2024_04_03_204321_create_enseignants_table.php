@@ -15,18 +15,16 @@ return new class extends Migration
             $table->id('idenseignant'); // Clé primaire idenseignant
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email',200)->unique();
+            $table->string('email',200);
             $table->string('motdepasse');
-            $table->string('type');
-            $table->string('grade');
-            $table->unsignedBigInteger('idexamen')->unsigned(); // Clé étrangère idexamen
+            $table->enum('type', ['vacataire', 'permanent', 'doctorant']);
+           // $table->string('type');
+            $table->string('grade')->nullable();
             $table->timestamps();
 
             //// Définir idenseignant comme clé primaire
             $table->primary('idenseignant');
 
-            // Définir idexamen comme clé étrangère
-            $table->foreign('idexamen')->references('idexamen')->on('examens');
         });
     }
 

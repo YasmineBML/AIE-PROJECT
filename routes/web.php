@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EnseignantController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,3 +11,4 @@ Route::get('/module', [\App\Http\Controllers\CGModule::class, 'index'])->name('m
 
 Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
 Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
+Route::resource('enseignants',EnseignantController::class);
