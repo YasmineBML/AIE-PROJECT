@@ -9,11 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('specialites', function (Blueprint $table) {
+
             $table->id('idspecialite');
             $table->string('nomspecialite');
+
+            $table->id();
+            $table->string('nom');
+            $table->string('departement');
+
             $table->string('niveau');
             $table->timestamps();
         });

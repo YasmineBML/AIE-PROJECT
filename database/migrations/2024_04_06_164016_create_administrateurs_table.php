@@ -9,27 +9,23 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('administrateurs', function (Blueprint $table) {
-            $table->id('idadmin');
+            $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email', 200)->unique(); // Définir une longueur maximale de 255 pour la colonne email
-            $table->string('motdepasse');
+            $table->string('Date_naissence');
+            $table->string('Email');
+            $table->string('Mot_de_passe');
             $table->timestamps();
-
-            // Définir idadmin comme clé primaire
-            $table->primary('idadmin');
         });
     }
-
-
 
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('administrateurs');
     }

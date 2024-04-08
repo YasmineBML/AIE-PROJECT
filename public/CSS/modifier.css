@@ -1,0 +1,66 @@
+#manav{
+    background-color: #35512F;
+}
+#navbutton{
+    color: red;
+}
+li{
+    margin-right: 50px;
+    font-weight: bolder;
+}
+.welcometext{
+    font-size: larger;
+    padding-top: 100px;
+    text-align: center;
+    font-weight: bolder;
+}
+#firstsection{
+    height: 200px;
+    
+}
+#btnsersh{
+    padding: 10px;
+    border-radius: 20px;
+}
+#deuxiemediv{
+    margin-top: 30px;
+ 
+}
+#iconeuser{
+    font-size: x-large;
+}
+#sec1{
+    background-color: #35512F;
+    margin-top: 20px;
+}
+table  tr{
+    border: solid black;
+}
+table td{
+	/*ajouter des bordure sous forme de tri ou point ou ligne continue*/
+    /*pour encadrer les mot fais solid*/
+	border-style: solid;	
+	/*pour coller les bordure */
+	border-collapse: collapse;
+	/*border-color: : silver;*/
+	border: solid black ;
+    /* pour center les td */
+    text-align: center;
+}
+td{
+	width:220px;	
+    border: solid;
+}
+.row{
+    padding: 10px;
+}
+.btnajouter{
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    width: 100px;
+}
+input{
+    border-radius: 20px;
+}

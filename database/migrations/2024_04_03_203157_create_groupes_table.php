@@ -9,20 +9,23 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('groupes', function (Blueprint $table) {
-            $table->id('idgroupe');
+            $table->id();
+            $table->string('nom');
             $table->integer('nombre_etudiant');
+
             $table->unsignedBigInteger('idsection')->unsigned();
 
             // Clé étrangère
             $table->foreign('idsection')->references('idsection')->on('sections')->onDelete('cascade');
 
+            $table->foreignId('sections_id')->constrained();
+
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.

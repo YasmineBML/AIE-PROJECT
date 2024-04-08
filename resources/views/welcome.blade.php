@@ -13,6 +13,11 @@
 
     </head>
     <body >
+<<<<<<< HEAD
 <h1>group  aiee</h1>
+=======
+<h1>group  aie</h1>
+<a href="/specialites/specilaite">Acceder a la liste des spécialites</a>
+>>>>>>> c67ce7832856445180f575a7976d4c8f4974cfff
     </body>
 </html>
