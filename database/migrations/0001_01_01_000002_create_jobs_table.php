@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('queue', 191)->index(); // Limitation de la longueur de la colonne et ajout d'un index
+            $table->string('queue', 191)->index(); // Spécifier une longueur pour l'index de la colonne 'queue'
             $table->longText('payload');
             $table->unsignedTinyInteger('attempts');
             $table->unsignedInteger('reserved_at')->nullable();
@@ -21,9 +21,10 @@ return new class extends Migration
             $table->unsignedInteger('created_at');
         });
 
+
         Schema::create('job_batches', function (Blueprint $table) {
-            $table->string('id', 191)->primary(); // Limitation de la longueur de la colonne id
-            $table->string('name', 255);
+            $table->string('id', 191)->primary(); // Spécifier une longueur pour la colonne 'id'
+            $table->string('name');
             $table->integer('total_jobs');
             $table->integer('pending_jobs');
             $table->integer('failed_jobs');
@@ -34,9 +35,10 @@ return new class extends Migration
             $table->integer('finished_at')->nullable();
         });
 
+
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('uuid', 191)->unique(); // Limitation de la longueur de la colonne uuid et ajout d'une contrainte unique
+            $table->string('uuid', 191)->unique(); // Spécifier une longueur pour la colonne 'uuid' et ajouter la contrainte unique
             $table->text('connection');
             $table->text('queue');
             $table->longText('payload');
