@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Nondisponibilite_local extends Model
+class GroupesLocals extends Model
 {
     use HasFactory;
 }
