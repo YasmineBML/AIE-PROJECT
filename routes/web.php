@@ -32,3 +32,17 @@ Route::get('/update_formation/{id}','App\Http\Controllers\SpecialiteController@u
 // la route pour effecuter la modification :
 Route::post('/update/traitement','App\Http\Controllers\SpecialiteController@update_specialite_traitement');
 
+
+  //RouteCoteEnseignants
+Route::get('/consultation-planning', function () {
+    return view('ConsultationPlanningEns');
+})->name('Consultat ionPlanningEns'); // Définir le nom de la route ici
+Route::get('/', function () {
+    return view('AccueilEns');
+})->name('AccueilEns');
+Route::get('/MonCompte-Ens', function () {
+    return view('MonCompteEns');
+})->name('MonCompteEns'); // Définir le nom de la route ici
+Route::get('/Disponnabilité-Ens', function () {
+    return view('DisponnabilitéEns ');
+})->name('DisponnabilitéEns'); // Définir le nom de la route ici
