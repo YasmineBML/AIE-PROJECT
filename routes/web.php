@@ -36,13 +36,18 @@ Route::post('/update/traitement','App\Http\Controllers\SpecialiteController@upda
   //RouteCoteEnseignants
 Route::get('/consultation-planning', function () {
     return view('ConsultationPlanningEns');
-})->name('Consultat ionPlanningEns'); // Définir le nom de la route ici
-Route::get('/', function () {
+})->name('ConsultationPlanningEns'); // Définir le nom de la route ici
+
+Route::get('/Accueil-Ens', function () {
     return view('AccueilEns');
 })->name('AccueilEns');
+
 Route::get('/MonCompte-Ens', function () {
     return view('MonCompteEns');
 })->name('MonCompteEns'); // Définir le nom de la route ici
 Route::get('/Disponnabilité-Ens', function () {
     return view('DisponnabilitéEns ');
 })->name('DisponnabilitéEns'); // Définir le nom de la route ici
+
+
+
