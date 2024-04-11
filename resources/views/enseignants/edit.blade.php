@@ -38,9 +38,7 @@
         #bordno{
             border-radius: 20px;
         }
-        #mkl{
-            margin-left: 80px;
-        }
+
     #bordpre{
         border-radius: 20px;
     }
@@ -49,12 +47,26 @@
         border-radius: 20px;
         width: 210px;
     }
+
     #borem{
         border-radius: 20px;
+        max-width: 340px;
+
+    }
+    #om{
+        margin-left: 100px;
     }
     #borspe{
         border-radius: 20px;
 
+    }
+    #borspee{
+        border-radius: 20px;
+
+    }
+    #mkl{
+        margin-left: 80px;
+        width: 210px;
     }
     #borgr{
         border-radius: 20px;
@@ -115,15 +127,18 @@
                             </div></div>
                             <div id="ided">
                             <div class="form-group mb-4" id="spasnom">
-                                <label class="form-label fw-bold" for="numero">Type</label>
+                                <label class="form-label fw-bold" for="type">Type</label>
                                {{--<input type="text" class="form-control" value="{{old("type",$enseignant->type)}}"  name="type" placeholder="type" id="bornum">
                                --}}  <select name="type" class="form-control" id="bornum" required>
-                                <option value="" selected disabled>
+                                <option value=""  disabled>
                                     Type
                                 </option>
-                                <option value="permanent">permanent</option>
+                                <option {{ $enseignant->type === "permanent" ? "selected" : "" }} value="permanent">permanent</option>
+                                <option {{$enseignant->type === "vacataire" ? "selected" : "" }} value="vacataire">vacataire</option>
+                                <option {{$enseignant->type === "doctorant" ? "selected" : "" }} value="doctorant">doctorant</option>
+                                {{--<option value="permanent">permanent</option>
                                 <option value="vacataire">vacataire </option>
-                                <option value="doctorant">doctorant </option>
+                                <option value="doctorant">doctorant </option>--}}
                             </select>
                             </div>
                             <div class="form-group mb-3">
@@ -131,14 +146,19 @@
                                 <input type="text" class="form-control" value="{{old("grade",$enseignant->grade)}}"  placeholder="grade" name="grade" id="borgr">
                             </div> </div>
                             <div id="ided">
-                            <div class="form-group mb-3">
-                                <label class="form-label fw-bold" for="email">Email</label>
-                                <input type="text" class="form-control" value="{{old("email",$enseignant->email)}}"  placeholder="email" name="email" id="borem">
+
+                            <div class="form-group mb-3" >
+                                <label class="form-label fw-bold" for="mot_de_passe">mot_de_passe</label>
+                                <input type="text" class="form-control" value="{{old("mot_de_passe",$enseignant->mot_de_passe)}}"  placeholder="mot_de_passe" name="mot_de_passe" id="borspe">
                             </div>
                             <div class="form-group mb-3" id="mkl">
-                                <label class="form-label fw-bold" for="motdepasse">motdepasse</label>
-                                <input type="text" class="form-control" value="{{old("motdepasse",$enseignant->motdepasse)}}"  placeholder="motdepasse" name="motdepasse" id="borspe">
+                                <label class="form-label fw-bold" for="date_de_naissence">date_de_naissence</label>
+                                <input type="date" class="form-control" value="{{old("date_de_naissence",$enseignant->date_de_naissence)}}"  placeholder="date_de_naissence" name="date_de_naissence" id="borspee">
                             </div>
+                        </div>
+                        <div class="form-group mb-3" id="om">
+                            <label class="form-label fw-bold" for="email">Email</label>
+                            <input type="email" class="form-control" value="{{old("email",$enseignant->email)}}"  placeholder="email" name="email" id="borem">
                         </div>
 
 

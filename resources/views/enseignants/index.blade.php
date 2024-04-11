@@ -117,6 +117,9 @@
         </div>
 
     </div>
+    @include('enseignants.script')
+    @yield('enseignants.script')
+    @section('script')
     <script>
         $(document).ready( function () {
             $('#myTable').DataTable({
@@ -127,6 +130,10 @@
             });
         });
     </script>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
 </body>
 </html>

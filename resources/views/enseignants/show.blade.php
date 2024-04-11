@@ -64,34 +64,40 @@
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="nom" class="form-label fw-bold">Prénom</label>
+                        <label for="prenom" class="form-label fw-bold">Prénom</label>
                         <div class="border border-success rounded-pill rounded p-2" id="bien">
                             {{$enseignant->prenom}}
                         </div>
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="fullname"  class="form-label fw-bold">Email</label>
+                        <label for="email"  class="form-label fw-bold">Email</label>
                         <div class="border border-success rounded-pill  rounded p-2" id="bien">
                             {{$enseignant->email}}
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="fullname" class="form-label fw-bold">motdepasse</label>
+                        <label for="mot_de_passe" class="form-label fw-bold">mot de passe</label>
                         <div class="border border-success rounded-pill  rounded p-2" id="bien">
-                            {{$enseignant->motdepasse}}
+                            {{$enseignant->mot_de_passe}}
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="fullname" class="form-label fw-bold">Type</label>
+                        <label for="type" class="form-label fw-bold">Type</label>
                         <div class="border border-success rounded-pill rounded p-2" id="bien">
                             {{$enseignant->type}}
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="fullname" class="form-label fw-bold">Grade</label>
+                        <label for="grade" class="form-label fw-bold">Grade</label>
                         <div class="border border-success rounded-pill rounded p-2" id="bien">
                             {{$enseignant->grade}}
+                        </div>
+                    </div>
+                     <div class="form-group mb-3">
+                        <label for="date_de_naissence" class="form-label fw-bold">Date de naissance</label>
+                        <div class="border border-success rounded-pill rounded p-2" id="bien">
+                            {{$enseignant->date_de_naissence}}
                         </div>
                     </div>
                 </div>

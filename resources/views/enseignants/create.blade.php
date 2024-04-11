@@ -27,6 +27,7 @@
         }
         #in4{
             display: flex;
+            margin-bottom: 30px;
 
         }
         #to{
@@ -64,11 +65,20 @@
 
     #me{
         border-radius: 20px;
-        max-width: 240px;
+        max-width: 210px;
+
     }
+    #mee{
+        border-radius: 20px;
+        max-width: 340px;
+        margin-left: 100px;
+
+    }
+
+
     #aj{
         margin-left: 180px;
-        width: 160px;
+        width: 200px;
         border-radius: 20px;
 
 
@@ -153,12 +163,12 @@
                                 </select>
 
                         </div>
-                        <div class="form-group mb-3" id="in4">
+                        <div class="form-group mb-5" id="in4">
                             <input type="text" class="form-control" value="{{old("mot_de_passe")}}"  placeholder="mot de passe" name="mot_de_passe" id="jp">
-                           <input type="text" class="form-control" value="{{old("date_de_naissence")}}"  placeholder="date de naissence" name="date_de_naissence" id="me">
+                           <input type="date" class="form-control" value="{{old("date_de_naissence")}}"  placeholder="date de naissence" name="date_de_naissence" id="me">
                           </div>
-                          <div class="form-group mb-3" id="in4">
-                           <input type="text" class="form-control" value="{{old("email")}}"  placeholder="Email" name="email" id="me">
+                          <div class="form-group mb-5" >
+                           <input type="email" class="form-control" value="{{old("email")}}"  placeholder="exemple@gmail.com" name="email" id="mee">
                           </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8">
