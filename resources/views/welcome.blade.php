@@ -17,7 +17,7 @@
 
 <h1>group  aie</h1>
 <a href="/specialites/specilaite">Acceder a la liste des spécialites</a><br>
-<a href="{{ route('AccueilEns') }}">Accueil</a>
+<a href="{{ route('AccueilEns') }}">CoteEnseignant</a>
 
     </body>
 </html>
