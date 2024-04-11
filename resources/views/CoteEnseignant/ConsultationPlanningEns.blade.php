@@ -82,7 +82,7 @@
 
 
     <div class="Bar">
-        @include('BarreDeMenuEns')
+        @include('CoteEnseignant.BarreDeMenuEns')
     </div>   
     
     
