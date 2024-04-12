@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EnseignantController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,6 +11,9 @@ Route::get('/module', [\App\Http\Controllers\CGModule::class, 'index'])->name('m
 
 Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
 Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
+
+Route::resource('enseignants',EnseignantController::class);
+
 
 // la route pour retourner liste des specialite
 Route::get('/specialites/specilaite','App\Http\Controllers\SpecialiteController@listespecialite');
@@ -27,3 +31,23 @@ Route::get('/delete_formation/{id}','App\Http\Controllers\SpecialiteController@s
 Route::get('/update_formation/{id}','App\Http\Controllers\SpecialiteController@update_specialite');
 // la route pour effecuter la modification :
 Route::post('/update/traitement','App\Http\Controllers\SpecialiteController@update_specialite_traitement');
+
+
+  //RouteCoteEnseignants
+Route::get('/consultation-planning', function () {
+    return view('CoteEnseignant.ConsultationPlanningEns');
+})->name('ConsultationPlanningEns'); // Définir le nom de la route ici
+
+Route::get('/Accueil-Ens', function () {
+    return view('CoteEnseignant.AccueilEns');
+})->name('AccueilEns');
+
+Route::get('/MonCompte-Ens', function () {
+    return view('CoteEnseignant.MonCompteEns');
+})->name('MonCompteEns'); // Définir le nom de la route ici
+Route::get('/Disponnabilité-Ens', function () {
+    return view('CoteEnseignant.DisponnabilitéEns ');
+})->name('DisponnabilitéEns'); // Définir le nom de la route ici
+
+
+

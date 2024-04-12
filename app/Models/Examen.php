@@ -11,7 +11,7 @@ class Examen extends Model
     protected $fillable = [
         'date_examen',
         'crenaux',
-             
+
     ];
 
     // relation pour la relier avec module :

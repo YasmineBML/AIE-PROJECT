@@ -10,7 +10,7 @@ class Groupe extends Model
     use HasFactory;
     protected $fillable = [
         'nom',
-        'nombre_etudiant',       
+        'nombre_etudiant',
     ];
 
     public function section()

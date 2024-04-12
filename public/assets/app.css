@@ -1,0 +1,15 @@
+@import "./lib/bootstrap/css/bootstrap.css";
+header
+{
+
+
+    background-color:#35512f;
+    /*color:aliceblue;*/
+    padding-top: 30px;
+    min-height: 100px;
+    border-bottom : #35512f 5px solid;
+}
+body{
+    background-color:#fef5e7;
+
+}

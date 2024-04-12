@@ -10,12 +10,12 @@ class Enseignant extends Model
     use HasFactory;
     protected $fillable = [
         'nom',
-        'preom',
+        'prenom',
         'date_de_naissence',
         'email',
         'mot_de_passe',
         'grade',
-        'type',     
+        'type',
     ];
 
     // la fontion pour relier enseignant et disponibilite :
@@ -30,7 +30,7 @@ class Enseignant extends Model
         return $this->belongsToMany(Examen::class);
     }
 
-    // fonction pour relier avec module 
+    // fonction pour relier avec module
     public function modules()
     {
         return $this->belongsToMany(Module::class);

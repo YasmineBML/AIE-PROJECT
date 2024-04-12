@@ -11,7 +11,7 @@ class Local extends Model
     protected $fillable = [
         'libelle',
         'capacite',
-        'type',       
+        'type',
     ];
 
     // focntion pour relier local avec groupe :

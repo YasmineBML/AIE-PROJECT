@@ -13,6 +13,6 @@ class Administrateur extends Model
         'prenom',
         'date_de_naissence',
         'email',
-        'mot_de_passe',       
+        'mot_de_passe',
     ];
 }
