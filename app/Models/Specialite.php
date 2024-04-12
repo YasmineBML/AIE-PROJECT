@@ -20,5 +20,5 @@ class specialite extends Model
     {
         return $this->hasMany(Module::class);
     }
-    
+
 }

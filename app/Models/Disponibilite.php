@@ -10,7 +10,7 @@ class Disponibilite extends Model
     use HasFactory;
     protected $fillable = [
         'jour',
-        'crenaux',     
+        'crenaux',
     ];
 
     // fonction pour la relier enseignant :
