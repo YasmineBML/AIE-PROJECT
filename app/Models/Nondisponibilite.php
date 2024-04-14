@@ -16,6 +16,6 @@ class Nondisponibilite extends Model
     // la relation entre la non disponibilite et le local  :
     public function locals()
     {
-        return $this->belongsToMany(Local::class);
+        return $this->belongsToMany(Local::class,'nondisponibilites_locals');
     }
 }

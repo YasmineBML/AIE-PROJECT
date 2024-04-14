@@ -21,7 +21,7 @@ class Module extends Model
     // focntion pour relier au enseignant :
     public function enseignants()
     {
-        return $this->belongsToMany(Enseignant::class);
+        return $this->belongsToMany(Enseignant::class,'enseignants_modules');
     }
 
     // la focntion pour relier les module et examen :

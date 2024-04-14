@@ -17,13 +17,13 @@ class Local extends Model
     // focntion pour relier local avec groupe :
     public function groupes()
     {
-        return $this->belongsToMany(Group::class);
+        return $this->belongsToMany(Group::class,'groupes_locals');
     }
 
     // relation de local avec non disponibilite :
 
     public function nondisponibilites()
     {
-        return $this->belongsToMany(Nondisponibilite::class);
+        return $this->belongsToMany(Nondisponibilite::class,'nondisponibilites_locals');
     }
 }

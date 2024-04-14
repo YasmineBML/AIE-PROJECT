@@ -21,18 +21,18 @@ class Enseignant extends Model
     // la fontion pour relier enseignant et disponibilite :
     public function disponibilites()
     {
-        return $this->belongsToMany(Disponibilite::class);
+        return $this->belongsToMany(Disponibilite::class,'enseignants_disponibilites');
     }
 
     // la relation avec examen:
     public function examens()
     {
-        return $this->belongsToMany(Examen::class);
+        return $this->belongsToMany(Examen::class,'examens_enseignants');
     }
 
     // fonction pour relier avec module
     public function modules()
     {
-        return $this->belongsToMany(Module::class);
+        return $this->belongsToMany(Module::class,'enseignants_modules');
     }
 }

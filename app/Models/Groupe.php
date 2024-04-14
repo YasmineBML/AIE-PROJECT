@@ -21,6 +21,6 @@ class Groupe extends Model
     // la fonction pour relier groupe et local :
     public function locals()
     {
-        return $this->belongsToMany(Local::class);
+        return $this->belongsToMany(Local::class,'groupes_locals');
     }
 }

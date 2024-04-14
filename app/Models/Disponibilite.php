@@ -16,6 +16,6 @@ class Disponibilite extends Model
     // fonction pour la relier enseignant :
     public function enseignants()
     {
-        return $this->belongsToMany(Enseignant::class);
+        return $this->belongsToMany(Enseignant::class,'enseignants_disponibilites');
     }
 }

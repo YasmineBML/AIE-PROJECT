@@ -7,19 +7,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/module', [\App\Http\Controllers\CGModule::class, 'index'])->name('module');
+//Route::get('/module', [\App\Http\Controllers\CGModule::class, 'index'])->name('module');
 
-Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
-Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
+//Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
+//Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
+
+// Traitement de module :
+// route pour afficher les module :
+Route::get('/Modules/module','App\Http\Controllers\ModuleController@listemodule');
+// la route pour ajouter des module :
+Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
+// pour la supression d'un module :
+Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprimer_mod');
+// la route pour afficher la vue de update :
+Route::get('/update_module/{id}','App\Http\Controllers\ModuleController@update_mod');
+// effectuer la modification des modules :
+Route::post('/updatemodule/traitement','App\Http\Controllers\ModuleController@modifier_module');
+
+
 
 Route::resource('enseignants',EnseignantController::class);
 
-
 // la route pour retourner liste des specialite
-Route::get('/specialites/specilaite','App\Http\Controllers\SpecialiteController@listespecialite');
-
-// la route pour ajouter une formation
-Route::get('/addspecialite','App\Http\Controllers\SpecialiteController@addspecialite');
+Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite');
 
 // la route pour redirection lors de lajoute de formation
 Route::post('/ajouter/traitement','App\Http\Controllers\SpecialiteController@ajouter_specialite');

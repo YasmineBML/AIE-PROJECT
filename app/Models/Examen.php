@@ -23,6 +23,6 @@ class Examen extends Model
     // relation avec ensieignant :
     public function enseignants()
     {
-        return $this->belongsToMany(Enseignant::class);
+        return $this->belongsToMany(Enseignant::class,'examens_enseignants');
     }
 }

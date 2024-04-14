@@ -86,7 +86,15 @@
                     <label for="">Nom:</label>
                 </div>
                 <div class="col-12 col-md-9">
-                    <input type="text" name="nomspecialite" value="{{ $spec->nomspecialite }}">
+                    <input type="text" name="nom" value="{{ $spec->nom }}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <label for="">departement:</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" name="departement" value="{{ $spec->nom }}">
                 </div>
             </div>
             <div class="row">
