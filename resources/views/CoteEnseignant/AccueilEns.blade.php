@@ -94,7 +94,7 @@
     
     <script>
     const text = "Bienvenue dans votre espace enseignant!\nPlanifiez vos examens en toute simplicité. Saisissez votre disponibilité, consultez l'emploi du temps des examens.\n\n\nPrêt à commencer ?";
-    const delay = 100; // Délai en millisecondes entre l'affichage de chaque lettre
+    const delay = 80; // Délai en millisecondes entre l'affichage de chaque lettre
 
     let index = 0;
     const animatedText = document.getElementById('animated-text');
@@ -120,21 +120,6 @@
 
 
 
-
-
-
-
-
-
-
-  
-   
-   
-   
-   
-    
-    
-    
 
 </body>
 </html>
