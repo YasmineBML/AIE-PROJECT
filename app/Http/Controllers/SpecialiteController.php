@@ -24,17 +24,29 @@ class SpecialiteController extends Controller
     {
         $request->validate([
             'nom' => 'required',
+<<<<<<< Updated upstream
             'departement' => 'required',
+=======
+            'departement'=> 'required',
+>>>>>>> Stashed changes
             'niveau' => 'required',
         ]);
         
         // pour inserer :
+<<<<<<< Updated upstream
         $specialite = new Specialite();
+=======
+        $specialite = new Specialite(); 
+>>>>>>> Stashed changes
         $specialite->nom = $request->nom;
         $specialite->departement = $request->departement;
         $specialite->niveau = $request->niveau;
         $specialite->save();
+<<<<<<< Updated upstream
         return redirect('/specialites/specialite')->with('status','Ajouter avec succes');
+=======
+        return redirect('/specialites/specilaite')->with('status','Ajouter avec succes');
+>>>>>>> Stashed changes
     }
     
     // traiter la supression :           
@@ -70,11 +82,20 @@ class SpecialiteController extends Controller
             'departement' => 'required',
             'niveau' => 'required',
         ]);
+<<<<<<< Updated upstream
                         
         $speci = Specialite::find($request->id);                        
         $speci->nom = $request->nom;
         $speci->departement = $request->departement; 
         $speci->niveau = $request->niveau; 
+=======
+
+        $speci = Specialite::find($request->id);
+       
+        $speci->nom = $request->nom;
+        $speci->departement = $request->departement;
+        $speci->niveau = $request->niveau;     
+>>>>>>> Stashed changes
         $speci->update();
                         
         return redirect('/specialites/specialite')->with('status','Modification avec succes');

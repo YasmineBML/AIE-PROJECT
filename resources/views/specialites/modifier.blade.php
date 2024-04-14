@@ -87,6 +87,7 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" name="nom" value="{{ $spec->nom }}">
+<<<<<<< Updated upstream
                 </div>
             </div>
             <div class="row">
@@ -95,8 +96,20 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <input type="text" name="departement" value="{{ $spec->nom }}">
+=======
+>>>>>>> Stashed changes
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <label for="">Nom:</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input type="text" name="departement" value="{{ $spec->departement }}">
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12 col-md-3">
                     <label for="">Niveau:</label>

@@ -7,7 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< Updated upstream
 //Route::get('/module', [\App\Http\Controllers\CGModule::class, 'index'])->name('module');
+=======
+Route::get('/module', [\App\Http\Controllers\ModuleController::class, 'index'])->name('module');
+>>>>>>> Stashed changes
 
 //Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
 //Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
@@ -31,7 +35,7 @@ Route::resource('enseignants',EnseignantController::class);
 // la route pour retourner liste des specialite
 Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite');
 
-// la route pour redirection lors de lajoute de formation
+// la route pour redirection lors de lajoute de specialite
 Route::post('/ajouter/traitement','App\Http\Controllers\SpecialiteController@ajouter_specialite');
 
 // gerer la supression de specialite :
@@ -42,6 +46,7 @@ Route::get('/update_formation/{id}','App\Http\Controllers\SpecialiteController@u
 // la route pour effecuter la modification :
 Route::post('/update/traitement','App\Http\Controllers\SpecialiteController@update_specialite_traitement');
 
+<<<<<<< Updated upstream
 
   //RouteCoteEnseignants
 Route::get('/consultation-planning', function () {
@@ -61,3 +66,10 @@ Route::get('/Disponnabilité-Ens', function () {
 
 
 
+=======
+// la route pour inserer un module :
+Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
+
+// pour la supression d'un module :
+Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprimer_mod');
+>>>>>>> Stashed changes
