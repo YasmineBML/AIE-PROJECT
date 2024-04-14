@@ -25,4 +25,10 @@ class Examen extends Model
     {
         return $this->belongsToMany(Enseignant::class,'examens_enseignants');
     }
+
+    // relation avec local :
+    public function locals()
+    {
+        return $this->belongsToMany(Local::class,'examens_locals');
+    }
 }

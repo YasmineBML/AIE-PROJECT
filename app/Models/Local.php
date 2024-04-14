@@ -26,4 +26,10 @@ class Local extends Model
     {
         return $this->belongsToMany(Nondisponibilite::class,'nondisponibilites_locals');
     }
+
+    // relation evace examen :
+    public function examens()
+    {
+        return $this->belongsToMany(Examen::class,'examens_locals');
+    }
 }
