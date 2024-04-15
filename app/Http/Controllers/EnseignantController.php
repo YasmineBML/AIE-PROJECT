@@ -58,7 +58,7 @@ class EnseignantController extends Controller
         $data = $request->except(['_token']);
         Enseignant::create($data);
         return redirect()->route("enseignants.index")->with([
-            "success" => "Enseignant added successfully"
+            "success" => "Ajouter avec succes"
         ]);
     }
 
@@ -106,7 +106,7 @@ class EnseignantController extends Controller
         $data = $request->except(['_token', '_method']);
         $enseignant->update($data);
         return redirect()->route("enseignants.index")->with([
-            "success" => "Enseignant updated successfully"
+            "success" => "Modification avec succes"
         ]);
     }
 
@@ -118,7 +118,7 @@ class EnseignantController extends Controller
         $enseignant= Enseignant::where('email', $id)->first();
         $enseignant->delete();
         return redirect()->route("enseignants.index")->with([
-            "success" => "Enseignant deleted successfully"
+            "success" => "Suppresion avec succes"
         ]);
         //
     }

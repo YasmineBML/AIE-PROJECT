@@ -10,6 +10,6 @@ class Administrateur extends Model
     use HasFactory;
     protected $fillable = [
         'email',
-        'mot_de_passe',
+        'password',
     ];
 }
