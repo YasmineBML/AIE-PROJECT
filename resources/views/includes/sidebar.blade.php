@@ -17,7 +17,7 @@
     <a href="{{ route('acceuil') }}"><i class="fas fa-home"></i> Accueil</a>
     <a href="#"><i class="fas fa-graduation-cap"></i> Formations</a>
     <a href="#"><i class="fas fa-book"></i> Spécialités</a>
-    <a href="#"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a>
+    <a href="{{ route('enseignants.index') }}"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a>
     <a href="#"><i class="fas fa-building"></i> Salles</a>
     <a href="#"><i class="fas fa-user-graduate"></i> Étudiants</a>
     <a href="#"><i class="fas fa-calendar-alt"></i> Emplois du temps</a>
