@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+.Desktop13 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #FEF5E7;
+
+
+}
+
+.GestionDEmploisDuTempsDExamens {
+    width: 400px;
+    height: 200px;
+    left: 105px;
+    top: 140px;
+    position: absolute;
+    color: #38512F;
+    font-size: 50px;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.FacilitezLaPlannificationDExamensUniversitaireAvecNotreSiteDeGNRationDEmploisDuTemps {
+    width: 383px;
+    height: 127px;
+    left: 105px;
+
+    top: 400px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.Rectangle1 {
+    width: 200px;
+    height: 60px;
+    left: 205px;
+    top: 510px;
+    position: absolute;
+    background: #38512F;
+    border-radius: 20px;
+}
+
+.SeConnecter {
+    width: 200px;
+    height: 30px;
+    left: 205px;
+    top: 520px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgba(0, 123, 255, 0.01);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ScheduleAmico1 {
+    width: 350px;
+    height: 350px;
+    left: 714px;
+    top: 149px;
+    position: absolute;
+}
+
+.LogoooRemovebgPreview2 {
+    width: 190px;
+    height: 110px;
+    left: 24px;
+    top: -21px;
+    position: absolute;
+}
