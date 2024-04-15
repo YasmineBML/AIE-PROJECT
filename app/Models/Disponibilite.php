@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disponibilite extends Model
 {
-    protected $fillable = ['jour', 'heure'];
+    use HasFactory;
+    protected $fillable = [
+        'jour',
+        'crenaux',
+    ];
+
+    // fonction pour la relier enseignant :
+    public function enseignants()
+    {
+        return $this->belongsToMany(Enseignant::class,'enseignants_disponibilites');
+    }
 }

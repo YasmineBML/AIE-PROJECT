@@ -7,11 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 
 class Local extends Model
 {
-    protected $fillable = ['libelle', 'capacite', 'type', 'idexamen'];
+    use HasFactory;
+    protected $fillable = [
+        'libelle',
+        'capacite',
+        'type',
+    ];
 
-    // Relation avec l'examen
-    public function examen()
+    // focntion pour relier local avec groupe :
+    public function groupes()
     {
-        return $this->belongsTo(Examen::class, 'idexamen');
+        return $this->belongsToMany(Group::class,'groupes_locals');
+    }
+
+    // relation de local avec non disponibilite :
+
+    public function nondisponibilites()
+    {
+        return $this->belongsToMany(Nondisponibilite::class,'nondisponibilites_locals');
+    }
+
+    // relation evace examen :
+    public function examens()
+    {
+        return $this->belongsToMany(Examen::class,'examens_locals');
     }
 }

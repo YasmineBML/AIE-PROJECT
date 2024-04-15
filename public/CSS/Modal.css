@@ -1,0 +1,70 @@
+
+#ajouter,#annuler{
+    font-weight: 500;
+    font-size: 1em;
+    display: block;
+    margin: 10px auto;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    color:  white; /* Couleur du texte */
+    background: #35512F;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    width: 450px;
+    height: 550px;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+label{
+    margin-right: 10px;
+}
+label,input,select,option{
+    margin-bottom: 10px;
+}
+
+.modal-header .modal-heading {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.modal-footer .form-group {
+    text-align: center;
+    margin: 20px;
+}
+.modal-divider {
+    border: none;
+    height: 2px; /* Augmentez la hauteur pour la rendre plus visible */
+    background-color: #ccc;
+    margin: 10px 0;
+}
+

@@ -7,8 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nondisponibilite extends Model
 {
-    protected $fillable = ['jour', 'crenaux'];
+    use HasFactory;
+    protected $fillable = [
+        'date',
+        'crenaux',
+    ];
 
-    // Aucune relation définie pour cette table dans cet exemple
-
+    // la relation entre la non disponibilite et le local  :
+    public function locals()
+    {
+        return $this->belongsToMany(Local::class,'nondisponibilites_locals');
+    }
 }

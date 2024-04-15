@@ -7,11 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Section extends Model
 {
-    protected $fillable = ['nomsection', 'idspecialite'];
+    use HasFactory;
+    protected $fillable = [
+        'nom',
+    ];
 
-    // Relation avec la spécialité
     public function specialite()
     {
-        return $this->belongsTo(Specialite::class, 'idspecialite');
+        return $this->belongsTo(Specialite::class);
+    }
+
+    // fonction pour la relation avec les groupe :
+    public function groupes()
+    {
+        return $this->hasMany(Groupe::class);
     }
 }

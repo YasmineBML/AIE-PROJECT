@@ -7,10 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model
 {
-    protected $fillable = ['libelle', 'idspecialite'];
+    use HasFactory;
+    protected $fillable = [
+        'libelle',
+        'semsetre',
+    ];
 
     public function specialite()
     {
-        return $this->belongsTo(Specialite::class, 'idspecialite', 'idspecialite');
+        return $this->belongsTo(Specialite::class);
+    }
+
+    // focntion pour relier au enseignant :
+    public function enseignants()
+    {
+        return $this->belongsToMany(Enseignant::class,'enseignants_modules');
+    }
+
+    // la focntion pour relier les module et examen :
+    public function examens()
+    {
+        return $this->hasMany(Examen::class);
     }
 }
