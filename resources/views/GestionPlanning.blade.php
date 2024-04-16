@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+@extends('layouts.app')
+
+@section('title', 'emploidutemps')
+
+@section('content')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Planning</title>
-    <link rel="stylesheet" href="/CSS/GestionPlanning.css">
 
-</head>
-<body>
+
+
 <div style="margin-bottom: 100px">
     <h2 id="texte1" style="text-align: center">Veuillez sélectionner les informations relatives à votre emploi du temps</h2>
 </div>
@@ -63,5 +64,7 @@
     </div>
     <button id="nextPageButton" onclick="window.location.href='{{ route('GestionHoraire') }}'" style="margin-top: 30px">Page suivante</button>
 </div>
-</body>
-</html>
+@endsection
+@section('styles')
+    <link rel="stylesheet" href="/CSS/GestionPlanning.css">
+@endsection

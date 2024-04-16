@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+@extends('layouts.app')
+
+@section('title', 'Horaires')
+
+@section('content')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion d'horaire</title>
-    <link rel="stylesheet" href="/CSS/GestionHoraire.css">
-</head>
-<body>
+
+
 <div style="margin-bottom: 100px">
     <h2 id="texte1" style="text-align: center">Vous pouvez maintenant programmer votre emploi du temps avec les horaires souhaités</h2>
 </div>
@@ -51,5 +52,8 @@
     </table>
     <button id="pagesuivante" >Valider</button>
 </div>
-</body>
-</html>
+
+@endsection
+@section('styles')
+    <link rel="stylesheet" href="/CSS/GestionHoraire.css">
+@endsection

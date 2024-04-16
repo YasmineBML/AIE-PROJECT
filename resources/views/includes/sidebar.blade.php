@@ -15,13 +15,13 @@
 
     </div>
     <a href="{{ route('acceuil') }}"><i class="fas fa-home"></i> Accueil</a>
-    <a href="#"><i class="fas fa-graduation-cap"></i> Formations</a>
-    <a href="#"><i class="fas fa-book"></i> Spécialités</a>
+    <a href="{{ route('specialites.specialite') }}"><i class="fas fa-graduation-cap"></i> Spécialités</a>
+    <a href="{{ route('Modules.module') }}"><i class="fas fa-book"></i> Modules</a>
     <a href="{{ route('enseignants.index') }}"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a>
     <a href="#"><i class="fas fa-building"></i> Salles</a>
     <a href="#"><i class="fas fa-user-graduate"></i> Étudiants</a>
-    <a href="#"><i class="fas fa-calendar-alt"></i> Emplois du temps</a>
-    <a href="#"><i class="fas fa-door-closed"></i> Salles</a>
+    <a href="{{ route('GestionPlanning') }}"><i class="fas fa-calendar-alt"></i> Emplois du temps</a>
+
 
     <form id="logout-form" action="{{ route('admin.logout') }}" method="POST">
         @csrf

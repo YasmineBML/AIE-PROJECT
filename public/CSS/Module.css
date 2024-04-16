@@ -1,3 +1,13 @@
+.content {
+    margin-left: 250px;
+    margin-top: 10px;
+    width: calc(100% - 250px);
+
+    background-color: #FEF5E7;
+
+}
+
+
 .container {
     width: 50%;
     border: 1px solid #ccc;

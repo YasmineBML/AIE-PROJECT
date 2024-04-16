@@ -1,3 +1,13 @@
+.content {
+    margin-left: 270px;
+    margin-top: 10px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.5s;
+    background-color: #FEF5E7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .container {
     width: 40%;
     border: 1px solid #ccc;

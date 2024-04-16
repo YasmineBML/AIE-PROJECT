@@ -1,72 +1,29 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+@extends('layouts.app')
+
+@section('title', 'enseignant')
+
+@section('content')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Liste de Specialite</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    
+
     {{-- lien de fontawesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     {{-- link to bootstrap --}}
     <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.css">
-    
-    {{-- link de css --}}
-    <link rel="stylesheet" href="/Css/specialite.css">
-    <link rel="stylesheet" href="/Css/Modal.css">
-    
-</head>
-<body>
-    
-    {{-- debut de la navbar  --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid" id="manav">
-            
-            {{-- debut de code de logo --}}
-            <img src="/images/logos.png" class="img-fluid" alt="...">
-            {{-- fin code de logo --}}
-            
-            {{-- debut button de responsivité --}}
-            <button class="navbar-toggler" id="navbutton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {{-- fin de button de responsivité --}}
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" id="listechoix">
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Aceuille</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Formation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Enseignant</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Emploie de temps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Salles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Horaires</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-user" id="iconeuser"></i></a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-    {{-- fin de la navbar --}}
-    
+
+
+
+
+
+
+
     {{-- debut de la premiere section --}}
     <section class="container" id="firstsection">
         <div class="row">
@@ -77,7 +34,7 @@
                 </h4>
             </div>
         </div>
-        
+
         <div class="row" id="deuxiemediv">
             <div class="col-12 col-md-6">
                 <a href="/Modules/module"><button id="btnsersh">Voir Les modules</button></a>
@@ -86,7 +43,7 @@
                 <button id="btnajoutm" style="float: right;background-color: #35512F;"><i class="fa-sharp fa-regular fa-plus"></i></button>
             </div>
         </div>
-        <div class="row" >
+        {{--<div class="row" >
             <div class="col-12" id="divtab">
                 <table class="table">
                     <thead>
@@ -95,20 +52,20 @@
                             <th scope="col">Nom</th>
                             <th scope="col">Departement</th>
                             <th scope="col">Niveau</th>
-                            <th scope="col">Modules</th>                         
+                            <th scope="col">Modules</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($specia as $sp)
                         <tr>
-                            <td style="width: 150px">{{ $sp->id }}</td>
-                            <td style="width: 150px">{{ $sp->nom }}</td> 
-                            <td style="width: 150px">{{ $sp->departement }}</td>
-                            <td style="width: 150px">{{ $sp->niveau }}</td>
-                            <td style="width: 250px">
+                            <td >{{ $sp->id }}</td>
+                            <td >{{ $sp->nom }}</td>
+                            <td >{{ $sp->departement }}</td>
+                            <td >{{ $sp->niveau }}</td>
+                            <td >
                                 <p>Premier Semestre :</p>
-                                @foreach ($sp->modules as $m)                                   
+                                @foreach ($sp->modules as $m)
                                 @if ($m->semestre === '1')
                                 <ul>
                                     <li>{{ $m->libelle }}</li>
@@ -116,7 +73,7 @@
                                 @endif
                                 @endforeach
                                 <p>Deuxieme Semestre :</p>
-                                @foreach ($sp->modules as $m)                                   
+                                @foreach ($sp->modules as $m)
                                 @if ($m->semestre === '2')
                                 <ul>
                                     <li>{{ $m->libelle }}</li>
@@ -124,23 +81,48 @@
                                 @endif
                                 @endforeach
                             </td>
-                            
-                            <td>     
+
+                            <td>
                                 <a href="/update_formation/{{ $sp->id }}" id="btnupd" class="btn btn-default" style="background-color: blue" id="modifier">update</a>
                                 <a href="/delete_formation/{{ $sp->id }}" class="btn btn-defalut" style="background-color: red">Delete</a>
                             </td>
                         </tr>
                         @endforeach
-                        
+
                     </tbody>
                 </table>
             </div>
+        </div> --}}
+        <div class="card my-2" >
+            <div class="card-header">
+                <h3 class="text-center " >
+                    Specialite
+                </h3>
+            </div>
+            <div class="card-body" >
+                <table id="myTable" class="table table-bordered table-striped table-hover table-responsive-sm">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Type</th>
+                        <th>Grade</th>
+                        <th></th>
+                    </tr>
+
+                    </thead>
+
+
+                </table>
+            </div>
         </div>
-        
+        </div>
+
     </section>
-    
+
     {{-- fin de la premiere section --}}
-    
+
     <!-- Modal AJOUT MODULE -->
     <div class="modal" id="resource-modal">
         <!-- Header -->
@@ -149,7 +131,7 @@
             <button class="close"> <span>x</span></button>
         </div>
         <hr class="modal-divider">
-        
+
         <!-- Content -->
         <div class="modal-content">
             <form action="/ajouter/traitement" method="post">
@@ -168,7 +150,7 @@
                             <label style="margin-right: 90px">Niveau : </label>
                             <input type="text" name="niveau">
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -186,43 +168,43 @@
                 </div>
             </form>
         </div>
-        
+
         <!-- Footer -->
-        
+
     </div>
-    
-    
-    
-    
+
+
+
+
     <script>
         // Sélectionnez le bouton "Ajouter un module"
         const btnajout = document.getElementById('btnajoutm');
-        
+
         // Sélectionnez le modal à afficher
         const resourceModal = document.getElementById('resource-modal');
-        
+
         // Sélectionnez l'élément de fermeture du modal
         const closeBtn = document.querySelector('.close');
-        
+
         // Ajoutez un écouteur d'événement pour détecter le clic sur le bouton
         btnajout.addEventListener('click', function() {
             // Afficher le modal
             resourceModal.style.display = 'block';
         });
-        
+
         // Ajoutez un écouteur d'événement pour détecter le clic sur le bouton de fermeture
         closeBtn.addEventListener('click', function() {
             // Cacher le modal
             resourceModal.style.display = 'none';
         });
-        
-        
+
+
         // Au moment d'ajouter un module, vous pouvez envoyer une requête AJAX pour l'ajouter à la base de données.
         document.getElementById('ajouter').addEventListener('click', function() {
             const nomModule = document.querySelector('input[name="name"]').value;
             const professeursSelect = document.getElementById('professors-select');
             const professeursSelectionnes = Array.from(professeursSelect.selectedOptions).map(option => option.textContent);
-            
+
             // Envoyer une requête AJAX pour ajouter le module à la base de données
             $.ajax({
                 type: 'POST',
@@ -241,30 +223,35 @@
                 }
             });
         });
-        
+
         // Sélectionnez le bouton "Annuler"
         const btnAnnuler = document.getElementById('annuler');
-        
+
         // Ajoutez un gestionnaire d'événements pour détecter le clic sur le bouton "Annuler"
         btnAnnuler.addEventListener('click', function() {
             // Sélectionnez le formulaire
             const form = document.getElementById('resource-form');
-            
+
             // Réinitialisez les champs du formulaire
             form.reset();
-            
-            
-            
+
+
+
             // Cacher le modal
         });
     </script>
-    
-    
-    
-    
-</body>
+
+
+
+
+
 
 {{-- script pour js  --}}
 <script src="/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 
-</html>
+    @endsection
+    @section('styles'){{-- link de css --}}
+    <link rel="stylesheet" href="/CSS/specialite.css">
+
+
+@endsection

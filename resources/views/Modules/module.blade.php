@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+@extends('layouts.app')
+
+@section('title', 'Accueil')
+
+@section('content')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modules</title>
     <!-- Inclure jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/CSS/Module.css">
+
 
 
     {{-- lien pour la selection multiple --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
 
-</head>
-<body>
+
 
     <div class="row">
         <div>
@@ -225,5 +226,7 @@
         new MultiSelectTag('countries')  // id
     </script>
 
-</body>
-</html>
+@endsection
+@section('styles')
+    <link rel="stylesheet" href="/CSS/Module.css">
+@endsection

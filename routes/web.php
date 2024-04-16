@@ -35,12 +35,12 @@ Route::get('/acceuil', function () {
 
 Route::get('/module', [\App\Http\Controllers\ModuleController::class, 'index'])->name('module');
 
-//Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
-//Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
+Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
+Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
 
 // Traitement de module :
 // route pour afficher les module :
-Route::get('/Modules/module','App\Http\Controllers\ModuleController@listemodule');
+Route::get('/Modules/module','App\Http\Controllers\ModuleController@listemodule') ->name('Modules.module');
 // la route pour ajouter des module :
 Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
 // pour la supression d'un module :
@@ -55,7 +55,7 @@ Route::post('/updatemodule/traitement','App\Http\Controllers\ModuleController@mo
 Route::resource('enseignants',EnseignantController::class);
 
 // la route pour retourner liste des specialite
-Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite');
+Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite')->name('specialites.specialite');;
 
 // la route pour redirection lors de lajoute de specialite
 Route::post('/ajouter/traitement','App\Http\Controllers\SpecialiteController@ajouter_specialite');
