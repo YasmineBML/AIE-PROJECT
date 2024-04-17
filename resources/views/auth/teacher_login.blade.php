@@ -11,7 +11,7 @@
     <div class="login-box">
         <h1>Bienvenue dans votre site d’EDT d’examens</h1>
         <p>Authentifiez-vous pour accéder au site</p>
-        <form method="POST" action="{{ route('teacher_login') }}">
+        <form  method="GET" action="{{ route('AccueilEns') }}">
             @csrf
 
             <div class="form-group">
@@ -25,8 +25,10 @@
             </div>
 
             <div class="login-btns">
+                <form method="GET" action="{{ route('AccueilEns') }}">
                 <button type="submit" class="login-btn">Se connecter</button>
                 <a href="{{ route('admin.login') }}" class="login-btn">Je suis administrateur</a>
+                </form>
             </div>
         </form>
     </div>

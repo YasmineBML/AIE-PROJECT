@@ -17,9 +17,11 @@ body {
 }
 
 .login-box {
+
     background-color: #35512F;
     padding: 20px;
     border-radius: 10px;
+
     width: 350px;
     height: 300px;
     color: #fff;

@@ -127,11 +127,6 @@
                          Adresse email :</strong> <h6>thawanza.boulanouar@example.com</h6>
         </div>
 
-        <div class="element-liste">
-           <strong><img src="{{ asset('ImagesCoteEnseignant/gens.png') }}" 
-                 width="32" height="32" class="d-inline-block align-text-top">
-                 Matricule :</strong> <h6>1111111111111</h6>
-        </div>
 
         <div class="element-liste">
             <strong> <img src="{{ asset('ImagesCoteEnseignant/icons8-diploma-50.png') }}" 
