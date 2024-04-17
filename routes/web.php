@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EnseignantController;
+use App\Http\Controllers\LocalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 
@@ -53,6 +54,9 @@ Route::post('/updatemodule/traitement','App\Http\Controllers\ModuleController@mo
 
 
 Route::resource('enseignants',EnseignantController::class);
+Route::resource('local',LocalController::class);
+
+
 
 // la route pour retourner liste des specialite
 Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite')->name('specialites.specialite');;

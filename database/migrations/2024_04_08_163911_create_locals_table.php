@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('libelle');
             $table->integer('capacite');
-            $table->string('type');
+            $table->enum('type', ['Salle', 'Amphi']);
             $table->timestamps();
         });
     }

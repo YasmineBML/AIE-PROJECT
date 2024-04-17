@@ -17,7 +17,7 @@ class Local extends Model
     // focntion pour relier local avec groupe :
     public function groupes()
     {
-        return $this->belongsToMany(Group::class,'groupes_locals');
+        return $this->belongsToMany(Groupe::class,'groupes_locals');
     }
 
     // relation de local avec non disponibilite :

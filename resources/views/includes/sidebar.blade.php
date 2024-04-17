@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <title>Side Navigation Menu</title>
     <link rel="stylesheet" href="/fonts/fontawesome-free-6.5.2-web/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('CSS/sidebar.css') }}">
 
-</head>
-<body>
+
+
 <div class="sidenav">
     <div class="sidenav-header">
         <img src="Images/menu.png" alt="Logo">
@@ -18,7 +16,7 @@
     <a href="{{ route('specialites.specialite') }}"><i class="fas fa-graduation-cap"></i> Spécialités</a>
     <a href="{{ route('Modules.module') }}"><i class="fas fa-book"></i> Modules</a>
     <a href="{{ route('enseignants.index') }}"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a>
-    <a href="#"><i class="fas fa-building"></i> Salles</a>
+    <a href="{{ route('local.index') }}"><i class="fas fa-building"></i> Salles</a>
     <a href="#"><i class="fas fa-user-graduate"></i> Étudiants</a>
     <a href="{{ route('GestionPlanning') }}"><i class="fas fa-calendar-alt"></i> Emplois du temps</a>
 
@@ -32,5 +30,4 @@
 
 
 
-</body>
-</html>
+
