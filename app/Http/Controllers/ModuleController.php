@@ -89,4 +89,17 @@ class ModuleController extends Controller
         return redirect('/Modules/module')->with('status','Modification avec succes');
     }
 
+
+    // la fonction pour la recherche :
+    public function search(Request $request)
+    {
+        $search = $request->search ;
+
+        $mod = Module::where(function($query) use ($search){
+            $query->where('libelle','like',"%$search%");
+        })
+        ->get();
+
+        return view('Modules.module',compact('mod','search'));
+    }
 }

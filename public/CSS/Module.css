@@ -2,7 +2,6 @@
     margin-left: 250px;
     margin-top: 10px;
     width: calc(100% - 250px);
-
     background-color: #FEF5E7;
 
 }
@@ -20,13 +19,13 @@
     width: 900px;
 }
 
-table {
-    width: 100%;
-}
+/* table {
+    width: 50%;
+} */
 
-th, tr, td {
+/* th, tr, td {
     text-align: center;
-}
+} */
 
 #searchInput, #btnajoutm {
     border-radius: 10px;
@@ -53,7 +52,7 @@ th, tr, td {
     color:  white; /* Couleur du texte */
     background: #35512F;
 }
-.modal {
+.modall {
     display: none;
     position: fixed;
     top: 50%;

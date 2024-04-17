@@ -95,3 +95,5 @@ Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_mod
 // pour la supression d'un module :
 Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprimer_mod');
 
+// la route pour la recherche d'un module
+Route::get('/search','App\Http\Controllers\ModuleController@search');
