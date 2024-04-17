@@ -5,6 +5,7 @@
 @section('content')
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -39,6 +40,21 @@
     #mk{
         padding: 50px;
         padding-bottom: 10px;
+=======
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Enseignants</title>
+<link rel="preconnect" href="https://fonts.bunny.net">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/r-2.2.7/datatables.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+<style>
+    #mk{
+        padding: 50px;
+        padding-bottom: 10px;
+>>>>>>> Stashed changes
         
         
     }
@@ -61,9 +77,12 @@
         
         <div class="row" >
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
             <div class="col-md-9 mx-auto" >
 =======
+=======
+>>>>>>> Stashed changes
             
             <div class="col-md-8 mx-auto" >
 >>>>>>> Stashed changes
@@ -73,11 +92,14 @@
                     
                 </a></div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 
                 <div class="card my-3" >
 =======
+=======
+>>>>>>> Stashed changes
                 
                 
                 
@@ -131,9 +153,12 @@
                                         @csrf
                                         @method("DELETE")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
                                     <button onclick="deleteAd({{$enseignant->email}})"
 =======
+=======
+>>>>>>> Stashed changes
                                         {{-- <button
                                             onclick="
                                             event.preventDefault();
@@ -162,6 +187,7 @@
         </div>
         
     </div>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     @section('script')
     <script>
@@ -195,6 +221,8 @@
          buttonsStyling: false
          })
 =======
+=======
+>>>>>>> Stashed changes
     
 </div>
 @include('enseignants.script')
@@ -217,6 +245,10 @@
         });
     });
 </script>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 
          swalWithBootstrapButtons.fire({
@@ -245,10 +277,14 @@
 </script>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @stop
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 =======
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+>>>>>>> Stashed changes
+=======
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 >>>>>>> Stashed changes
 
