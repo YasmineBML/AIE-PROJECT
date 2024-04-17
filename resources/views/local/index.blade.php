@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Enseignant')
+@section('title', 'Local')
 
 @section('content')
 
@@ -142,3 +142,4 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('assets/app.css')}}">
 @endsection
+
