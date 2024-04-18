@@ -122,26 +122,41 @@
                                     <td>
                                         @if ($disponibilite->jour == 'Samedi')
                                       <span >Samedi</span>
-                                   @elseif ($disponibilite->type == 'Dimanche')
+                                   @elseif ($disponibilite->jour== 'Dimanche')
                                     <span >Dimanche</span>
-                                    @elseif ($disponibilite->type == 'Lundi')
+                                    @elseif ($disponibilite->jour == 'Lundi')
 
                                     <span >Lundi</span>
-                                    @elseif ($disponibilite->type == 'Mardi')
+                                    @elseif ($disponibilite->jour == 'Mardi')
 
                                     <span >Mardi</span>
-                                    @elseif ($disponibilite->type == 'Mercredi')
+                                    @elseif ($disponibilite->jour == 'Mercredi')
 
                                     <span >Mercredi</span>
-                                    @elseif ($disponibilite->type == 'Jeudi')
+                                    @elseif ($disponibilite->jour == 'Jeudi')
 
                                     <span >Jeudi</span>
 
                                 @endif
                                     </td>
+                                    <td>
+                                        @if ($disponibilite->crenaux == '8h-10h')
+                                      <span >8h-10h</span>
+                                   @elseif ($disponibilite->crenaux == '10h-12h')
+                                    <span >10h-12h</span>
+                                    @elseif ($disponibilite->crenaux == '12h-14h')
+
+                                    <span >12h-14h</span>
+                                    @elseif ($disponibilite->crenaux == '14h-16h')
+
+                                    <span >14h-16h</span>
+                                
+
+                                @endif
+                                    </td>
 
                                     <td class="d-flex justify-content-center align-items-center">
-
+{{--
                                         <a href="{{route('enseignants.edit',$enseignant->email)}}"
                                             class="btn btn-sm btn-warning mx-2">
                                             <i class="fas fa-edit"></i>
@@ -156,7 +171,7 @@
                                             <i class="fa fa-trash"></i>
                                         </button> </form>
 
-
+--}}
                                     </td>
                                 </tr>
                             @endforeach

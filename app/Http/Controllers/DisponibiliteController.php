@@ -41,7 +41,7 @@ class DisponibiliteController extends Controller
         //
         $this->validate($request, [
             'jour' =>['required' ,'in:Samedi,Dimanche,Lundi,Mardi,Mercredi,Jeudi'],
-            'crenaux' =>['in:8-10h,10h-12h,12h-14h,14h-16h'],
+            'crenaux' =>['required','in:8h-10h,10h-12h,12h-14h,14h-16h'],
 
         ]);
         $data = $request->except(['_token']);

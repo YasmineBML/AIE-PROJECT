@@ -93,10 +93,10 @@ Route::get('/Accueil-Ens', function () {
 Route::get('/MonCompte-Ens', function () {
     return view('CoteEnseignant.MonCompteEns');
 })->name('MonCompteEns'); // Définir le nom de la route ici
-Route::get('/Disponnabilité-Ens', function () {
-    return view('CoteEnseignant.DisponnabilitéEns ');
-})->name('DisponnabilitéEns'); // Définir le nom de la route ici
-
+//Route::get('/Disponnabilité-Ens', function () {
+  //  return view('CoteEnseignant.DisponnabilitéEns ');
+//})->name('DisponnabilitéEns'); // Définir le nom de la route ici
+Route::get('/Disponnabilité-Ens', DisponibiliteController::class .'@index')->name('DisponnabilitéEns');
 
 // la route pour inserer un module :
 Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
