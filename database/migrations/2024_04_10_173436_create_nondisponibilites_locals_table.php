@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('nondisponibilites_locals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('local_id')->constrained();
-            $table->foreignId('nondisponibilite_id')->constrained();
+            $table->foreignId('nondisponibilite_id')->constrained()->unsigned();
             $table->timestamps();
         });
     }

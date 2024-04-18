@@ -4,6 +4,9 @@ use App\Http\Controllers\EnseignantController;
 use App\Http\Controllers\LocalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\DisponibiliteController;
+
+//use App\Models\Disponibilite;
 
 
 Route::get('/', function () {
@@ -55,6 +58,12 @@ Route::post('/updatemodule/traitement','App\Http\Controllers\ModuleController@mo
 
 Route::resource('enseignants',EnseignantController::class);
 Route::resource('local',LocalController::class);
+Route::resource('disponibilite',DisponibiliteController::class);
+Route::get('/Create-Ens', function () {
+    return view('CoteEnseignant.create ');
+})->name('create');
+
+Route::post('/Disponnabilité-Ens', DisponibiliteController::class .'@store')->name('str');
 
 
 

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('groupes_locals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('groupe_id')->constrained();
-            $table->foreignId('local_id')->constrained();
+            $table->foreignId('groupe_id')->constrained()->unsigned();
+            $table->foreignId('local_id')->constrained()->unsigned();
             $table->timestamps();
         });
     }

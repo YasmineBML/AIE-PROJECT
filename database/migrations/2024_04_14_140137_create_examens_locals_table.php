@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('date');
             $table->string('crenaux');
-            $table->foreignId('examen_id')->constrained();
-            $table->foreignId('local_id')->constrained();
+            $table->foreignId('examen_id')->constrained()->unsigned();
+            $table->foreignId('local_id')->constrained()->unsigned();
             $table->timestamps();
         });
     }

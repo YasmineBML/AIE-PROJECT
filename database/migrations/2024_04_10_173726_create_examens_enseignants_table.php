@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('examens_enseignants', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('enseignant_id')->constrained();
-            $table->foreignId('examen_id')->constrained();
+            $table->foreignId('enseignant_id')->constrained()->unsigned();
+            $table->foreignId('examen_id')->constrained()->unsigned();
             $table->timestamps();
         });
     }
