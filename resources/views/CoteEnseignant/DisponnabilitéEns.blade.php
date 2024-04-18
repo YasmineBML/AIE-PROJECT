@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('assets/app.css')}}">
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/r-2.2.7/datatables.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -150,28 +155,28 @@
                                     @elseif ($disponibilite->crenaux == '14h-16h')
 
                                     <span >14h-16h</span>
-                                
+
 
                                 @endif
                                     </td>
 
                                     <td class="d-flex justify-content-center align-items-center">
-{{--
+                                     {{--
                                         <a href="{{route('enseignants.edit',$enseignant->email)}}"
                                             class="btn btn-sm btn-warning mx-2">
                                             <i class="fas fa-edit"></i>
-                                        </a>
+                                        </a>--}}
 
-                                        <form id="{{$enseignant->email}}" action="{{route('enseignants.destroy',$enseignant->email)}}" method="post">
+                                        <form id="{{$disponibilite->id}}" action="{{route('dest',$disponibilite->id)}}" method="post">
                                             @csrf
                                             @method("DELETE")
 
-                                        <button onclick="deleteAd({{$enseignant->email}})"
+                                        <button onclick="deleteAd({{$disponibilite->id}})"
                                             type="submit" class="btn btn-sm btn-danger">
                                             <i class="fa fa-trash"></i>
                                         </button> </form>
 
---}}
+
                                     </td>
                                 </tr>
                             @endforeach
@@ -184,7 +189,8 @@
 
             </div>
 
-        </div>
+        </div> 
+
          <div class="Bar">
            @include('CoteEnseignant.BarreDeMenuEns')
          </div>

@@ -87,7 +87,7 @@
                 </div>
                 <div class="form-group mb-5" id="in3">
 
-                    <select name="Crenaux" class="form-control" id="numbor" required>
+                    <select name="crenaux" class="form-control" id="numbor" required>
                          <option value="" selected disabled>
                              Crenaux
                          </option>

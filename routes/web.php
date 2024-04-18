@@ -8,40 +8,31 @@ use App\Http\Controllers\DisponibiliteController;
 
 //use App\Models\Disponibilite;
 
-
+//les route de fatima
 Route::get('/', function () {
     return view('interface1/interface01');
 })->name('interface1');
-
-
 Route::get('admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
-
-
 Route::post('admin/login', [AdminLoginController::class, 'login']);
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
-
-
-
 Route::get('teacher_login', function () {
     return view('auth/teacher_login');
 })->name('teacher_login');
-
-
 Route::get('/acceuil', function () {
     return view('acceuil');
 })->name('acceuil');
 
 
-//Route::get('/', function () {
-   // return view('welcome');
-//});
 
+
+
+
+
+//les route de yasmine
 
 Route::get('/module', [\App\Http\Controllers\ModuleController::class, 'index'])->name('module');
-
 Route::get('/GestionPlanning', [\App\Http\Controllers\CGPlanning::class, 'index'])->name('GestionPlanning');
 Route::get('/GestionHoraire', [\App\Http\Controllers\CGHoraire::class, 'index'])->name('GestionHoraire');
-
 // Traitement de module :
 // route pour afficher les module :
 Route::get('/Modules/module','App\Http\Controllers\ModuleController@listemodule') ->name('Modules.module');
@@ -53,20 +44,33 @@ Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprime
 Route::get('/update_module/{id}','App\Http\Controllers\ModuleController@update_mod');
 // effectuer la modification des modules :
 Route::post('/updatemodule/traitement','App\Http\Controllers\ModuleController@modifier_module');
+// la route pour inserer un module :
+Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
+
+// pour la supression d'un module :
+Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprimer_mod');
+
+// la route pour la recherche d'un module
+Route::get('/search','App\Http\Controllers\ModuleController@search');
 
 
 
+
+
+
+//les route de sabrina
 Route::resource('enseignants',EnseignantController::class);
 Route::resource('local',LocalController::class);
 Route::resource('disponibilite',DisponibiliteController::class);
-Route::get('/Create-Ens', function () {
-    return view('CoteEnseignant.create ');
-})->name('create');
-
-Route::post('/Disponnabilité-Ens', DisponibiliteController::class .'@store')->name('str');
 
 
 
+
+
+
+
+
+//les route de bachir
 // la route pour retourner liste des specialite
 Route::get('/specialites/specialite','App\Http\Controllers\SpecialiteController@listespecialite')->name('specialites.specialite');;
 
@@ -81,6 +85,16 @@ Route::get('/update_formation/{id}','App\Http\Controllers\SpecialiteController@u
 // la route pour effecuter la modification :
 Route::post('/update/traitement','App\Http\Controllers\SpecialiteController@update_specialite_traitement');
 
+
+
+
+
+
+
+
+
+
+//les route de thawanza
 //RouteCoteEnseignants
 Route::get('/consultation-planning', function () {
     return view('CoteEnseignant.ConsultationPlanningEns');
@@ -93,16 +107,9 @@ Route::get('/Accueil-Ens', function () {
 Route::get('/MonCompte-Ens', function () {
     return view('CoteEnseignant.MonCompteEns');
 })->name('MonCompteEns'); // Définir le nom de la route ici
-//Route::get('/Disponnabilité-Ens', function () {
-  //  return view('CoteEnseignant.DisponnabilitéEns ');
-//})->name('DisponnabilitéEns'); // Définir le nom de la route ici
 Route::get('/Disponnabilité-Ens', DisponibiliteController::class .'@index')->name('DisponnabilitéEns');
-
-// la route pour inserer un module :
-Route::post('/add/traitement','App\Http\Controllers\ModuleController@ajouter_module');
-
-// pour la supression d'un module :
-Route::get('/delete_module/{id}','App\Http\Controllers\ModuleController@supprimer_mod');
-
-// la route pour la recherche d'un module
-Route::get('/search','App\Http\Controllers\ModuleController@search');
+Route::get('/Create-Ens', function () {
+    return view('CoteEnseignant.create ');
+})->name('create');
+Route::post('/Disponnabilité-Ens', DisponibiliteController::class .'@store')->name('str');
+Route::delete('/Disponnabilité-Ens/{id}', DisponibiliteController::class .'@destroy')->name('dest');

@@ -82,5 +82,10 @@ class DisponibiliteController extends Controller
     public function destroy(string $id)
     {
         //
+        $enseignants=  Disponibilite::where('id', $id)->first();
+        $enseignants->delete();
+        return redirect()->route('DisponnabilitéEns')->with([
+            "success" => "Employe deleted successfully"
+        ]);
     }
 }
