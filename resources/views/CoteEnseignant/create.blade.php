@@ -27,7 +27,6 @@
                background-color: #38512F;
                width: calc(100% - 14.08rem);
                float: right;
-
                 height: 70px;}
 
 
@@ -47,16 +46,6 @@
                 border-radius: 15px;
                 
                 }
-          
-          
-          
-
-
-
-
-
-
-
 
         </style>
 

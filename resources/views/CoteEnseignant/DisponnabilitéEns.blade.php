@@ -52,15 +52,6 @@
                 border-radius: 15px;
 
                 }
-                
-
-
-
-
-
-
-
-
 
 
 
@@ -166,22 +157,13 @@
                              @foreach ($crenaux as $crenaux)
                                 <span>{{ $crenaux }}</span><br>
                             @endforeach
-           
-           
-       
-                                
-                                
-                                  
-                                   
-                                           
-                                           
-                                  
+                          
 
                                     </td>
 
                                     <td class="d-flex justify-content-center align-items-center">
                                      
-                                        <a href="{{route('edit')}}"
+                                        <a href="{{ route('edit', $disponibilite->id) }}"
                                             class="btn btn-sm btn-warning mx-2">
                                             <i class="fas fa-edit"></i>
                                         </a>

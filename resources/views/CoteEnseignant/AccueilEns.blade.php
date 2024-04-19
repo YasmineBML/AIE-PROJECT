@@ -58,13 +58,6 @@
                 font-weight: bold; /* Met le texte en gras */
             }
 
-
-
-
-
-
-
-
     </style>
 </head>
 <body id="body">
@@ -109,16 +102,6 @@
 
     animateText();
   </script>
-
-
-
-
-
-
-
-
-
-
 
 
 </body>

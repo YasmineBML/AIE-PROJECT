@@ -89,6 +89,7 @@
         </div>
     </nav>
     <main class="col-lg-10 main-content">
+        
         <!-- Content Here -->
     </main>
 

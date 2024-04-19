@@ -49,16 +49,6 @@
         }
 
 
-
-
-
-
-
-
-
-
-
-
     </style>
 </head>
 <body id="body">
@@ -83,19 +73,6 @@
         <div class="Bar">
             @include('CoteEnseignant.BarreDeMenuEns')
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </body>
     </html>

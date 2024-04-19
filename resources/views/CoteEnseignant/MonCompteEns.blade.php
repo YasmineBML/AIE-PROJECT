@@ -135,9 +135,6 @@
         </div>
 
 
-
-
-
         <div class="element-liste">
             <strong><img src="{{ asset('ImagesCoteEnseignant/icons8-type-50.png') }}"
                         width="32" height="32" class="d-inline-block align-text-top">

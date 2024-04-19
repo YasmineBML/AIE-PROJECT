@@ -108,12 +108,23 @@ Route::get('/MonCompte-Ens', function () {
     return view('CoteEnseignant.MonCompteEns');
 })->name('MonCompteEns'); // Définir le nom de la route ici
 Route::get('/Disponnabilité-Ens', DisponibiliteController::class .'@index')->name('DisponnabilitéEns');
+
+
 Route::get('/Create-Ens', function () {
     return view('CoteEnseignant.create ');
 })->name('create');
+
 Route::get('/Edit-Ens', function () {
-    return view('CoteEnseignant.edit ');
+    return view('CoteEnseignant.edit');
 })->name('edit');
-Route::post('/Disponnabilité-Ens', DisponibiliteController::class .'@store')->name('str');
-Route::delete('/Disponnabilité-Ens/{id}', DisponibiliteController::class .'@destroy')->name('dest');
-Route::put('/Disponnabilité-Ens/{id}', DisponibiliteController::class .'@update')->name('upd');
+
+
+
+Route::post('/storer', DisponibiliteController::class .'@store')->name('str');
+Route::delete('/destroy/{id}', DisponibiliteController::class .'@destroy')->name('dest');
+
+
+Route::get('/disponibilite/{id}/edit', 'DisponibiliteController@edit')->name('edit');
+
+// Route pour mettre à jour la disponibilité
+Route::put('/disponibilite/{id}', 'DisponibiliteController@update')->name('upd');
