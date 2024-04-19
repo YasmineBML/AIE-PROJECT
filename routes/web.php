@@ -111,5 +111,9 @@ Route::get('/Disponnabilité-Ens', DisponibiliteController::class .'@index')->na
 Route::get('/Create-Ens', function () {
     return view('CoteEnseignant.create ');
 })->name('create');
+Route::get('/Edit-Ens', function () {
+    return view('CoteEnseignant.edit ');
+})->name('edit');
 Route::post('/Disponnabilité-Ens', DisponibiliteController::class .'@store')->name('str');
 Route::delete('/Disponnabilité-Ens/{id}', DisponibiliteController::class .'@destroy')->name('dest');
+Route::put('/Disponnabilité-Ens/{id}', DisponibiliteController::class .'@update')->name('upd');

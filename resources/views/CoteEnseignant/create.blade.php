@@ -13,7 +13,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
         <!-- Styles -->
         <style>
            .custom-navbar {
@@ -36,22 +36,27 @@
                 }
                 .box {
                 width: 500px;
-                height: 700px;
+                height: 400px;
                 border: 2px solid green; /* Spécifie une bordure de 2 pixels de large, solide et rouge */
                 position: absolute; /* Position absolue par rapport au corps */
-                top: 70%; /* Place le haut de la boîte à 50% de la hauteur du corps */
+                top: 40%; /* Place le haut de la boîte à 50% de la hauteur du corps */
                 left: 60%; /* Place la gauche de la boîte à 50% de la largeur du corps */
                 text-align: center;
                 transform: translate(-50%, -50%); /* Centre la boîte horizontalement et verticalement */
                 background-color: #38512F;
                 border-radius: 15px;
-
+                
                 }
-.box{
-    width: 600px;
-    height: 600px;
-    margin-top: 0px;
-}
+          
+          
+          
+
+
+
+
+
+
+
 
         </style>
 
@@ -71,7 +76,8 @@
 
 
                 <div class="form-group mb-5" id="in3">
-
+                   <h5 class="text-white">Choisissez les jours </h5>
+                   <div class="col-7 mx-auto">
                        <select name="jour" class="form-control" id="numbor" required>
                             <option value="" selected disabled>
                                 jour
@@ -83,31 +89,48 @@
                             <option value="Mercredi">Mercredi </option>
                             <option value="Jeudi">Jeudi </option>
                         </select>
-
+                   </div>
                 </div>
                 <div class="form-group mb-5" id="in3">
 
-                    <select name="crenaux" class="form-control" id="numbor" required>
-                         <option value="" selected disabled>
-                             Crenaux
-                         </option>
-                         <option value="8h-10h">8h-10h</option>
-                         <option value="10h-12h">10h-12h</option>
-                         <option value="12h-14h">12h-14h </option>
-                         <option value="14h-16h">14h-16h </option>
-
-                     </select>
-
-             </div>
-
-
-                <div class="form-group row mb-0">
-                    <div class="col-md-8">
-                        <button type="submit" class="btn btn-dark" id="aj">
-                            {{ __('Ajouter') }}
-                        </button>
-                    </div>
+                <h5 class="text-white">Choisissez les crenaux </h5>
+                <div class="col-7 mx-auto">
+                     <select name="crenaux[]"id="crenaux" multiple>
+                  
+                          <option value="8h-10h">8h-10h</option>
+                          <option value="10h-12h">10h-12h</option>
+                          <option value="12h-14h">12h-14h</option>
+                          <option value="14h-16h">14h-16h</option>
+                          
+                    </select>
                 </div>
+             </div>
+             <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+             <script>
+               new MultiSelectTag('crenaux')  // id
+              </script> 
+
+                 <div class="btnajt d-flex justify-content-center">
+                     <div class="col-md-8">
+                         <button type="submit" class="btn" style="background-color: white; color: black; text" id="aj">
+                             {{ __('Ajouter') }}
+                         </button>
+                     </div>
+                 </div>
+
+              
+              
+              
+              
+              
+              
+              
+                
+                
+                
+                
+                
+                
             </form>
         </div>
     </div>

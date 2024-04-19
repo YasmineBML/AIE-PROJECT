@@ -40,11 +40,11 @@
                   background-color: #FEF5E7; /* Changer la couleur de fond de l'interface en #FEF5E7 */
                 }
                 .box {
-                width: 500px;
+                width: 600px;
                 height: 700px;
                 border: 2px solid green; /* Spécifie une bordure de 2 pixels de large, solide et rouge */
                 position: absolute; /* Position absolue par rapport au corps */
-                top: 70%; /* Place le haut de la boîte à 50% de la hauteur du corps */
+                top: 80%; /* Place le haut de la boîte à 50% de la hauteur du corps */
                 left: 60%; /* Place la gauche de la boîte à 50% de la largeur du corps */
                 text-align: center;
                 transform: translate(-50%, -50%); /* Centre la boîte horizontalement et verticalement */
@@ -52,16 +52,16 @@
                 border-radius: 15px;
 
                 }
+                
 
 
 
 
 
-.box{
-    width: 600px;
-    height: 500px;
-    margin-top: 60px;
-}
+
+
+
+
 
 
         </style>
@@ -84,8 +84,8 @@
 
          <div  class="box">
             <div>
-             <h6 class="text-center" id="mk">  <strong>Bienvenue dans l'espace d'enseignants,
-            vous pouvez effectuer les opérations d'ajouter, modification, suppression.</strong> </h6>
+             <h6 class="text-center" id="mk">  <strong class="text-white">
+                Effectuer les opérations d'ajouter, modification, suppression sur vos disponnibilités .</strong> </h6>
             </div>
 
             <div class="row" >
@@ -103,7 +103,7 @@
                     <div class="card my-3" >
                         <div class="card-header">
                             <h3 class="text-center " >
-                                Enseignants
+                                Disponnibilité
                             </h3>
                         </div>
                         <div class="card-body" >
@@ -114,7 +114,7 @@
                                         <th>Id</th>
                                         <th>Jours</th>
                                         <th>Crenaux</th>
-                                        <th></th>
+                                        <th>Actions</th>
                                     </tr>
 
                                 </thead>
@@ -142,10 +142,10 @@
 
                                     <span >Jeudi</span>
 
-                                @endif
+                                    @endif
                                     </td>
                                     <td>
-                                        @if ($disponibilite->crenaux == '8h-10h')
+                                 <!-- @if ($disponibilite->crenaux == '8h-10h')
                                       <span >8h-10h</span>
                                    @elseif ($disponibilite->crenaux == '10h-12h')
                                     <span >10h-12h</span>
@@ -154,20 +154,40 @@
                                     <span >12h-14h</span>
                                     @elseif ($disponibilite->crenaux == '14h-16h')
 
-                                    <span >14h-16h</span>
+                                    <span >14h-16h</span> 
 
 
-                                @endif
+                                    @endif-->
+                                
+                                  
+                                    @php
+                                         $crenaux = explode(',', $disponibilite->crenaux); // Séparer les créneaux par des virgules
+                                 @endphp
+                             @foreach ($crenaux as $crenaux)
+                                <span>{{ $crenaux }}</span><br>
+                            @endforeach
+           
+           
+       
+                                
+                                
+                                  
+                                   
+                                           
+                                           
+                                  
+
                                     </td>
 
                                     <td class="d-flex justify-content-center align-items-center">
-                                     {{--
-                                        <a href="{{route('enseignants.edit',$enseignant->email)}}"
+                                     
+                                        <a href="{{route('edit')}}"
                                             class="btn btn-sm btn-warning mx-2">
                                             <i class="fas fa-edit"></i>
-                                        </a>--}}
+                                        </a>
 
-                                        <form id="{{$disponibilite->id}}" action="{{route('dest',$disponibilite->id)}}" method="post">
+                                        <form id="{{$disponibilite->id}}" action="{{route('dest',$disponibilite->id)}}" 
+                                         method="post">
                                             @csrf
                                             @method("DELETE")
 
