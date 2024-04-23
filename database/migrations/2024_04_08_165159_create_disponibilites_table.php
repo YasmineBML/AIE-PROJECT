@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('disponibilites', function (Blueprint $table) {
             $table->id();
             $table->enum('jour', ['Samedi', 'Dimanche', 'Lundi','Mardi', 'Mercredi', 'Jeudi']);
-            $table->enum('crenaux', ['8h-10h', '10h-12h', '12h-14h','14h-16h']);
+            $table->String('crenaux'); 
             $table->timestamps();
         });
     }
