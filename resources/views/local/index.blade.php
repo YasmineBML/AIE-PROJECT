@@ -11,6 +11,22 @@
                 @include('alert')
             </div>
         </div>
+        <form action="{{ url('import_excel_local') }}" method="post" enctype="multipart/form-data">
+
+     {{ csrf_field() }}
+    <div class="mb-3" style="width: 500px;">
+        <label for="file">Sélectionnez le fichier Excel à importer</label>
+        <input class="form-control" type="file" id="formFileExcel" name="excel-file">
+    </div>
+    <button type="submit" class="btn btn-primary">Importer</button>
+</form>
+        
+        
+        
+        
+        
+        
+        
         <div class="text-end"> <a href="{{ route('local.create') }}" >
 
             <img src="{{ asset('assets/add.png') }}" alt="Description de l'image">

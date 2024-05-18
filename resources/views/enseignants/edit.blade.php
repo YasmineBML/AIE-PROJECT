@@ -150,10 +150,11 @@
                                 <label class="form-label fw-bold" for="mot_de_passe">mot_de_passe</label>
                                 <input type="text" class="form-control" value="{{old("mot_de_passe",$enseignant->mot_de_passe)}}"  placeholder="mot_de_passe" name="mot_de_passe" id="borspe">
                             </div>
-                            <div class="form-group mb-3" id="mkl">
+                          <!-- <div class="form-group mb-3" id="mkl">
                                 <label class="form-label fw-bold" for="date_de_naissence">date_de_naissence</label>
-                                <input type="date" class="form-control" value="{{old("date_de_naissence",$enseignant->date_de_naissence)}}"  placeholder="date_de_naissence" name="date_de_naissence" id="borspee">
-                            </div>
+                                <input type="date" class="form-control" value="{{old("date_de_naissence",$enseignant->date_de_naissence)}}" 
+                                 placeholder="date_de_naissence" name="date_de_naissence" id="borspee">
+                            </div> !-->
                         </div>
                         <div class="form-group mb-3" id="om">
                             <label class="form-label fw-bold" for="email">Email</label>

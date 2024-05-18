@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enseignant;
+
+use App\Imports\UserImport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Excel;
 
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -46,7 +49,7 @@ class EnseignantController extends Controller
         $this->validate ($request, [
             'nom' =>'required',
             'prenom' => 'required',
-            'date_de_naissence'=> 'required',
+            //'date_de_naissence'=> 'required',
             'email' => 'required',
             'mot_de_passe' =>'required',
             'grade' => 'nullable',
@@ -96,7 +99,7 @@ class EnseignantController extends Controller
         $this->validate($request, [
             'nom' =>'required',
             'prenom' => 'required',
-            'date_de_naissence'=> 'required',
+            //'date_de_naissence'=> 'required',
             'email' => 'required',
             'mot_de_passe' =>'required',
             'grade' => 'nullable',
@@ -122,4 +125,18 @@ class EnseignantController extends Controller
         ]);
         //
     }
+    public function import_excel()
+    {
+        //
+        return view('enseignants.index');
+    }
+    public function import_excel_post(Request $request)
+       {
+           Excel::import(new UserImport,$request->file('excel-file'));
+           return redirect()->route("enseignants.index")->with([
+            "success" => "Importation avec succes"
+        ]);
+           
+       }
+    
 }

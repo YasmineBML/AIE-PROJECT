@@ -128,3 +128,12 @@ Route::get('/disponibilite/{id}/edit', 'DisponibiliteController@edit')->name('ed
 
 // Route pour mettre à jour la disponibilité
 Route::put('/disponibilite/{id}', 'DisponibiliteController@update')->name('upd');
+
+
+//route importer enseignants 
+ Route::get('import-excel', [EnseignantController::class, 'import_excel']);
+ Route::post('import-excel', [EnseignantController::class, 'import_excel_post']);
+
+ //route importer salles  
+ Route::get('import_excel_local', [LocalController::class, 'import_excel_local']);
+ Route::post('import_excel_local', [LocalController::class, 'import_excel_local_post']);

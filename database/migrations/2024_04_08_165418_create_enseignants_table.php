@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('date_de_naissence');
+           // $table->string('date_de_naissence');
             $table->string('email');
             $table->string('mot_de_passe');
             $table->string('grade')->nullable();

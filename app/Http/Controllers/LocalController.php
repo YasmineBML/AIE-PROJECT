@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 use App\Models\Local;
 use Illuminate\Http\Request;
+use App\Imports\LocalImport;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Excel;
 
 
 class LocalController extends Controller
@@ -105,4 +107,17 @@ class LocalController extends Controller
             "success" => "Suppresion avec succes"
         ]);
     }
+    public function import_excel_local()
+{
+    //import_excel_local
+    return view('local.index');
+}
+public function import_excel_local_post(Request $request)
+   {
+       Excel::import(new LocalImport,$request->file('excel-file'));
+       return redirect()->route("local.index")->with([
+        "success" => "Importation avec succes"
+    ]);
+       
+   }
 }

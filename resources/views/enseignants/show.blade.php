@@ -95,12 +95,12 @@
                             {{$enseignant->grade}}
                         </div>
                     </div>
-                     <div class="form-group mb-3">
+                     <!--<div class="form-group mb-3">
                         <label for="date_de_naissence" class="form-label fw-bold">Date de naissance</label>
                         <div class="border border-success rounded-pill rounded p-2" id="bien">
                             {{$enseignant->date_de_naissence}}
                         </div>
-                    </div>
+                    </div>!-->
                 </div>
 
                 </div>
